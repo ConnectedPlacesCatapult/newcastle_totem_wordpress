@@ -1,0 +1,69 @@
+/*
+ * TechTotem Theme layout styles
+ *
+ * @package TechTotem
+ * @subpackage TechTotem_Theme
+ * @since 1.0
+ * @version 1.0
+ */
+
+
+/* 
+ * *******************************************************************************
+ * GLOBAL
+ * *******************************************************************************
+ */
+
+
+	/* BODY */
+	html,
+	body {
+		//background: yellow;
+		height: 100%;
+	}
+
+
+		/* WRAPPER */
+		.wrapper {
+			//background: orange;
+			height: 100%;
+		}
+
+
+			/* WRAPPER: INNER */
+			.wrapper-inner {
+				//background: green;
+				height: 100%;
+			}
+
+
+				/* CONTENT: MAIN */
+				.content-main {
+					//background: blue;
+					position: relative;
+				}
+
+
+					/* TIME & TEMP */
+					.time-temp {
+						//background: pink;
+						position: absolute;
+						top: ($global-margin * 2.5);
+						right: ($global-margin * 3.5);
+						z-index: 1;
+					}
+
+					/* .inner {
+						background-color: rgba($white, 0.3);
+					} */
+
+
+				/* NAVBAR */
+				.navbar {
+					background: $white;
+					position: fixed;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					z-index: 2;
+				}
