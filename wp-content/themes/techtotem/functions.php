@@ -78,7 +78,7 @@ function ttotem_theme_activation() {
 
 		/* CONTENT WIDTH */
 		if ( ! isset( $content_width ) ) {
-			$content_width = 1140;
+			$content_width = 1080;
 		}
 
 		/* MEDIUM LARGE IMAGES
@@ -86,20 +86,11 @@ function ttotem_theme_activation() {
 		 */
 		remove_image_size( 'medium-large' );
 
-		/* MENUS */
-
-			/* Register menu */
-			register_nav_menus(
-				array(
-					'primary' => 'Primary',
-				)
-			);
-
 
 	/* ******************************************************************************* */
 
 
-	/* CUTIFY: CUSTOM THEME SETTINGS (HOOKS AND FILTERS)
+	/* CUSTOM THEME SETTINGS (HOOKS AND FILTERS)
 	 * Custom features for this theme
 	 */
 
@@ -120,6 +111,26 @@ function ttotem_theme_activation() {
 		remove_action( 'wp_head', 'wlwmanifest_link' );
 		remove_action( 'wp_head', 'wp_generator' );
 		remove_action( 'wp_head', 'wp_shortlink_wp_head' );
+
+		/**
+		 * PARTNER CUSTOM SETTINGS
+		 * Uses ACF Pro options feature
+		 *
+		 * @link https://www.advancedcustomfields.com/resources/options-page/
+		 */
+		if( function_exists( 'acf_add_options_page' ) ) {
+
+			acf_add_options_page(
+				array(
+					'page_title' 	=> 'Partner settings for this Tech Totem',
+					'menu_title'	=> 'Partner Settings',
+					'menu_slug' 	=> 'partner-settings',
+					'capability'	=> 'edit_posts',
+					'redirect'		=> true
+				)
+			);
+	
+		}
 
 
 } // end theme activation
