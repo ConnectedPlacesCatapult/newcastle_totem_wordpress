@@ -18,20 +18,38 @@
 		<nav class="navbar">
 
 			<h1 class="show-for-sr">Navigation: Primary</h1>
-	    	<?php
-	    	wp_nav_menu(
-	        	array(
-	        		'theme_location'=>'primary',
-	        		'menu' => 'Primary',
-	        		'container_class' => '',
-	        		'container' => '',
-	        		'menu_class' => '',
-	        		'link_before' => '<span>',
-	        		'link_after' => '</span> <i class="icon"></i>',
-	        		'item_spacing' => 'discard',
-	        	)
-	        );
-	        ?>
+
+	    	<ul>
+
+	    		<li>
+	    			<a href="<?php echo home_url( '/' ); ?>">
+	    				<span>Home</span>
+	    				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/home.svg' ?>" class="icon"></object>
+	    			</a>
+	    		</li>
+
+	    		<li>
+	    			<a href="<?php echo home_url( '/ili/' ); ?>">
+	    				<span>Show me the way to</span>
+	    				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/icon-placeholder.svg' ?>" class="icon"></object>
+	    			</a>
+	    		</li>
+
+	    		<li>
+	    			<a href="<?php echo home_url( '/urban-observatory/' ); ?>">
+	    				<span>Show me more data</span>
+	    				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/logos/min/urbanobservatory-symbol.svg' ?>" class="icon"></object>
+	    			</a>
+	    		</li>
+
+	    		<li>
+	    			<a href="<?php echo home_url( '/parner/' ); ?>" style="background-color: <?php the_field( 'tt_partner_colour', 'option' ); ?>">
+	    				<span><?php the_field( 'tt_partner_name', 'option' ); ?></span>
+	    				<object type="image/svg+xml" data="<?php the_field( 'tt_partner_symbol', 'option' ); ?>" class="icon"></object>
+	    			</a>
+	    		</li>
+
+	    	</ul>
 
 		</nav><!-- .navbar -->
 
