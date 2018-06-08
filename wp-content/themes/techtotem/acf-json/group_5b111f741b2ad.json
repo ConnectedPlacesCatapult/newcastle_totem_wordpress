@@ -1,0 +1,54 @@
+{
+    "key": "group_5b111f741b2ad",
+    "title": "Colour palette",
+    "fields": [
+        {
+            "key": "field_5b11205f3792d",
+            "label": "Choose colour scheme",
+            "name": "tt_colour_scheme",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Choose colour scheme": "Choose colour scheme",
+                "fuschia": "Fuschia",
+                "navy": "Navy",
+                "turquoise": "Turquoise",
+                "white": "White",
+                "random": "Random",
+                "partner": "Partner's brand colour"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1528467830
+}
