@@ -9,7 +9,7 @@
  */
 ?>
 
-<h2 class="section-label left"><img src="<?php echo get_template_directory_uri() . '/img/logos/min/logo-urban-observatory.svg'; ?>" width="203" height="31" alt="Urban Observatory"></h2>
+<h2 class="section-label left"><img src="<?php echo get_template_directory_uri() . '/img/logos/min/urbanobservatory-logo.svg'; ?>" width="203" height="31" alt="Urban Observatory"></h2>
 
 <div class="card grid-x">
 
