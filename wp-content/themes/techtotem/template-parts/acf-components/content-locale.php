@@ -32,7 +32,10 @@
 
 		<div class="cell small-3">
 
-			<h2><img src="<?php echo get_template_directory_uri() . '/img/icons/min/icon-placeholder.svg'; ?>" width="41" height="41" alt=""> Tranquility</h2>
+			<h2>
+				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/category-tranquility.svg'; ?>" width="41" height="41" class="icon"></object>
+				Tranquility
+			</h2>
 
 			<ol class="listing">
 
@@ -45,7 +48,10 @@
 
 		<div class="cell small-3">
 
-			<h2><img src="<?php echo get_template_directory_uri() . '/img/icons/min/icon-placeholder.svg'; ?>" width="41" height="41" alt=""> Food & Drink</h2>
+			<h2>
+				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/category-food_drinks.svg'; ?>" width="41" height="41" class="icon"></object>
+				Food & Drink
+			</h2>
 
 			<ol class="listing">
 
@@ -58,7 +64,10 @@
 
 		<div class="cell small-3">
 
-			<h2><img src="<?php echo get_template_directory_uri() . '/img/icons/min/icon-placeholder.svg'; ?>" width="41" height="41" alt=""> Attractions</h2>
+			<h2>
+				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/category-attractions.svg'; ?>" width="41" height="41" class="icon"></object>
+				Attractions
+			</h2>
 
 			<ol class="listing">
 
@@ -71,7 +80,10 @@
 
 		<div class="cell small-3">
 
-			<h2><img src="<?php echo get_template_directory_uri() . '/img/icons/min/icon-placeholder.svg'; ?>" width="41" height="41" alt=""> Culture</h2>
+			<h2>
+				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/category-culture.svg'; ?>" width="41" height="41" class="icon"></object>
+				Culture
+			</h2>
 
 			<ol class="listing">
 
@@ -90,18 +102,16 @@
 <div class="callout-container">
 
 	<!-- WEATHER -->
-	<aside class="weather callout yellow">
+	<aside class="callout weather <?php echo $tt_data_recommendations[0]->properties[0]->two_hour_weather_forecast; ?>">
 		<h2>1 hour forecast</h2>
-		<p>
-			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/icon-placeholder.svg'; ?>" width="175" height="195" alt=""><br>
-			XX% chance of rain
-		</p>
+		<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/weather-' .  $tt_data_recommendations[0]->properties[0]->two_hour_weather_forecast . '.svg' ?>" width="175" height="195" class="icon"></object>
+		<p><?php echo round( $tt_data_recommendations[0]->properties[0]->two_hour_rain_forecast ); ?>% chance of rain</p>
 	</aside><!-- .weather -->
 
 	<!-- EVENTS -->
 	<div class="events callout gray">
 		<h2>
-			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/icon-placeholder.svg'; ?>" width="65" height="65" alt="">
+			<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/events.svg' ?>" width="65" height="65" class="icon"></object>
 			Local Events
 		</h2>
 
@@ -114,8 +124,8 @@
 				<!-- ORBIT CONTROLS -->
 				<div class="orbit-controls">
 
-					<button class="orbit-previous"><img src="<?php echo get_template_directory_uri() . '/img/icons/min/icon-placeholder.svg'; ?>" width="20" height="20" alt=""></button>
-					<button class="orbit-next"><img src="<?php echo get_template_directory_uri() . '/img/icons/min/icon-placeholder.svg'; ?>" width="20" height="20" alt=""></button>
+					<button class="orbit-previous"><img src="<?php echo get_template_directory_uri() . '/img/icons/min/chevron.svg'; ?>" width="19" height="10" alt=""></button>
+					<button class="orbit-next"><img src="<?php echo get_template_directory_uri() . '/img/icons/min/chevron.svg'; ?>" width="19" height="10" alt=""></button>
 
 				</div><!-- .orbit-controls -->
 

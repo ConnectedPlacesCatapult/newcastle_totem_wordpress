@@ -9,50 +9,45 @@
  * @since 1.0
  * @version 1.0
  */
-?>
 
-<div class="slider <?php echo $tt_clr_palette; ?>">
-	<div class="inner grid-container">
 
-		<!-- ORBIT -->
-		<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+if( have_rows( 'tt_slider_slides' ) ) : 
+?>	
 
-			<!-- ORBIT WRAPPER -->
-			<div class="orbit-wrapper">
+	<div class="slider <?php echo $tt_clr_palette; ?>">
+		<div class="inner grid-container">
 
-				<!-- ORBIT CONTAINER -->
-				<ul class="orbit-container">
+			<!-- ORBIT -->
+			<div class="orbit orbit-large" role="region" aria-label="Favorite Space Pictures" data-orbit data-auto-play="0" data-swipe="1" data-accessible="1">
 
-					<li class="orbit-slide">
-						<img class="orbit-image" src="https://placehold.it/1200x600/999?text=Slide-1" alt="Space">
-					</li>
+				<!-- ORBIT WRAPPER -->
+				<div class="orbit-wrapper">
 
-					<li class="orbit-slide">
-						<figure class="orbit-figure">
-							<img class="orbit-image" src="https://placehold.it/1200x600/888?text=Slide-2" alt="Space">
-							<figcaption class="orbit-caption">Lets Rocket!</figcaption>
-						</figure>
-					</li>
+					<!-- ORBIT CONTAINER -->
+					<ul class="orbit-container">
 
-					<li class="orbit-slide">
-						<figure class="orbit-figure">
-							<img class="orbit-image" src="https://placehold.it/1200x600/777?text=Slide-3" alt="Space">
-							<figcaption class="orbit-caption">Encapsulating</figcaption>
-						</figure>
-					</li>
+						<?php
+						while ( have_rows( 'tt_slider_slides' ) ) : the_row();
 
-					<li class="orbit-slide">
-						<figure class="orbit-figure">
-							<img class="orbit-image" src="https://placehold.it/1200x600/666&text=Slide-4" alt="Space">
-							<figcaption class="orbit-caption">Outta This World</figcaption>
-						</figure>
-					</li>
+							// get dynamic content selected for this row
+							$tt_content_component = get_sub_field( 'tt_dynamic_content' );
+							?>
 
-				</ul><!-- .orbit-container -->
+							<li class="orbit-slide">
 
-			</div><!-- .orbit-wrapper -->
+								<?php include( locate_template( 'template-parts/acf-components/component-row.php' ) ); ?>
 
-		</div><!-- .orbit -->
+							</li>
 
-	</div><!-- .inner -->
-</div><!-- .slider -->
+						<?php endwhile; ?>
+
+					</ul><!-- .orbit-container -->
+
+				</div><!-- .orbit-wrapper -->
+
+			</div><!-- .orbit -->
+
+		</div><!-- .inner -->
+	</div><!-- .slider -->
+
+<?php endif;

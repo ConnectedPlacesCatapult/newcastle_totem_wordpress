@@ -10,7 +10,7 @@
 ?>
 
 <!-- ORBIT -->
-<div class="orbit" role="region" aria-label="Local sensor data" data-timer-delay="10000" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+<div class="orbit orbit-large" role="region" aria-label="Local sensor data" data-timer-delay="10000" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
 
 	<!-- ORBIT WRAPPER -->
 	<div class="orbit-wrapper">
@@ -18,8 +18,8 @@
 		<!-- ORBIT CONTROLS -->
 		<div class="orbit-controls">
 
-			<button class="orbit-previous"><img src="<?php echo get_template_directory_uri() . '/img/icons/min/icon-placeholder.svg'; ?>" width="28" height="28" alt=""></button>
-			<button class="orbit-next"><img src="<?php echo get_template_directory_uri() . '/img/icons/min/icon-placeholder.svg'; ?>" width="28" height="28" alt=""></button>
+			<button class="orbit-previous"><img src="<?php echo get_template_directory_uri() . '/img/icons/min/chevron.svg'; ?>" width="26" height="10" alt=""></button>
+			<button class="orbit-next"><img src="<?php echo get_template_directory_uri() . '/img/icons/min/chevron.svg'; ?>" width="26" height="10" alt=""></button>
 
 		</div><!-- .orbit-controls -->
 

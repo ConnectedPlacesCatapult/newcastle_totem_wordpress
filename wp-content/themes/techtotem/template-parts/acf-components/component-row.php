@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying ACF Flexible Content - Row Component
+ * The template for displaying ACF Flexible Content - Preformatted Component
  *
  * @link https://www.advancedcustomfields.com/resources/flexible-content/
  *
@@ -9,6 +9,7 @@
  * @since 1.0
  * @version 1.0
  */
+
 
 // get colour palette
 $tt_clr_palette = get_sub_field( 'tt_colour_scheme' );
@@ -22,8 +23,7 @@ $tt_content_component = get_sub_field( 'tt_dynamic_content' );
 	<div class="inner grid-container">
 
 		<?php
-		// load corresponding template part
-		get_template_part( 'template-parts/acf-components/content', $tt_content_component );
+		include( locate_template( 'template-parts/acf-components/content-' . $tt_content_component . '.php' ) );
 		?>
 
 	</div><!-- .inner -->
