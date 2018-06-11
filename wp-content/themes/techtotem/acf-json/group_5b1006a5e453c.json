@@ -35,17 +35,17 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "field_5b1121c4c2d19",
+                            "collapsed": "",
                             "min": 1,
                             "max": 4,
                             "layout": "table",
                             "button_label": "Add Slide",
                             "sub_fields": [
                                 {
-                                    "key": "field_5b1121c4c2d19",
+                                    "key": "field_5b1e6283f8ae1",
                                     "label": "Content",
                                     "name": "tt_slider_slide_content",
-                                    "type": "select",
+                                    "type": "clone",
                                     "instructions": "",
                                     "required": 1,
                                     "conditional_logic": 0,
@@ -54,20 +54,13 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "choices": {
-                                        "Choose content type": "Choose content type",
-                                        "ili": "ILI",
-                                        "urbanobs": "Urban Observatory",
-                                        "partner": "Partner's custom slider",
-                                        "custom": "Custom content"
-                                    },
-                                    "default_value": [],
-                                    "allow_null": 0,
-                                    "multiple": 0,
-                                    "ui": 0,
-                                    "ajax": 0,
-                                    "return_format": "value",
-                                    "placeholder": ""
+                                    "clone": [
+                                        "group_5b11216d9673a"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0
                                 },
                                 {
                                     "key": "field_5b112122d033f",
@@ -223,5 +216,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1528467853
+    "modified": 1528718923
 }

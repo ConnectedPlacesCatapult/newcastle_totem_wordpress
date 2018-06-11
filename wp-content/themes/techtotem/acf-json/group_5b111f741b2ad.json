@@ -1,6 +1,23 @@
 {
     "key": "group_5b111f741b2ad",
     "title": "Colour palette",
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
     "fields": [
         {
             "key": "field_5b11205f3792d",
@@ -33,22 +50,5 @@
             "placeholder": ""
         }
     ],
-    "location": [
-        [
-            {
-                "param": "post_type",
-                "operator": "!=",
-                "value": "post"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": 0,
-    "description": "",
-    "modified": 1528467830
+    "modified": 1528468167
 }

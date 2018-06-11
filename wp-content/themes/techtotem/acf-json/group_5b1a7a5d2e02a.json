@@ -1,6 +1,6 @@
 {
     "key": "group_5b1a7a5d2e02a",
-    "title": "Partner Branding",
+    "title": "Totem Partner: Branding",
     "fields": [
         {
             "key": "field_5b1a7a73112fc",
@@ -34,7 +34,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "return_format": "url",
             "preview_size": "thumbnail",
             "library": "all",
             "min_width": "",
@@ -58,7 +58,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "return_format": "url",
             "preview_size": "thumbnail",
             "library": "all",
             "min_width": "",
@@ -102,5 +102,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1528467863
+    "modified": 1528709359
 }
