@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080px" height="1780px" viewBox="0 0 1080 1780" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Imageplaceholder Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Template-03-SCREENSAVER">
+            <g id="Imageplaceholder-Copy">
+                <rect id="Rectangle-4" fill="#F1ECEC" x="0" y="0" width="1080" height="1780"></rect>
+                <path d="M0.498949323,1.500075 L1074.23789,1762.58813" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                <path d="M5.76102418,1.50263049 L1073.18634,1762.58557" id="Line-Copy" stroke="#979797" stroke-linecap="square" transform="translate(539.473684, 882.044100) scale(-1, 1) translate(-539.473684, -882.044100) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
