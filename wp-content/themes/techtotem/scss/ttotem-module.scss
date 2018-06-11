@@ -10,9 +10,15 @@
 
 /* 
  * *******************************************************************************
- * GLOBAL
+ * UTILITIES AND HELPERS
  * *******************************************************************************
  */
+
+
+ 	/* OBJECT */
+	object {
+		pointer-events: none;
+	}
 
 
  	/* BACKGROUND COLOURS */
@@ -32,8 +38,12 @@
 		background-color: get-color(blue);
 	}
 
-	.orange {
-		background-color: get-color(orange);
+	.yellow {
+		background-color: get-color(yellow);
+	}
+
+	.gray {
+		background-color: $light-gray;
 	}
 
 	.white {
@@ -47,7 +57,7 @@
 
 	/* LEAD */
 	.lead {
-		font-size: rem-calc(53);
+		font-size: rem-calc(53) !important;
 	}
 
 
@@ -60,53 +70,24 @@
 		margin: 0 0 0 rem-calc(45);
 		padding: rem-calc(10) rem-calc(35);
 		color: $white;
+		position: absolute;
+		top: 0;
+		z-index: 1;
 	}
 
 
 	/* META */
 	.meta {
 		text-transform: uppercase;
-		font-size: rem-calc(15);
-	}
-
-
-	/* KEY */
-	.key {
-		list-style-type: none;
-		margin: 0;
-
-		li {
-			position: relative;
-			padding-left: rem-calc(24);
-
-			&:before {
-				position: absolute;
-				top: 0;
-				left: 6px;
-				transform: rotate(-45deg);
-			}
-		}
-
-		li.label-data-locale {
-
-			&:before {
-				@include css-triangle(9px, #DF1159, right);
-			}
-
-		}
-
-		li.label-data-urban-obs {
-
-			&:before {
-				@include css-triangle(9px, #00B2B6, right);
-			}
-
-		}
+		font-size: rem-calc(15) !important;
 	}
 
 
 	/* BUTTON */
 	.button {
+		text-transform: uppercase;
+		padding-left: rem-calc(50);
+		padding-right: rem-calc(50);
 
 		* {
 			color: $white;
@@ -159,12 +140,13 @@
 
 	/* SECTION-LABEL */
 	.section-label {
-		padding: rem-calc(10) rem-calc(25);
+		padding: rem-calc(10) rem-calc(25) 0;
 		display: inline-block;
-		line-height: normal;
+		line-height: 1;
 		position: absolute;
 		z-index: 1;
-		background-color: rgba($white, 0.3);
+		background-color: rgba($white, 0.5);
+
 
 			&.left {
 				left: 0;
@@ -174,47 +156,10 @@
 				right: 0;
 			}
 
-	}
-
-
-	/* CARD */
-	.card {
-
-		.card-section {
-			margin-top: rem-calc(15);
-			text-transform: uppercase;
-		}
-
-			h3 {
-				font-size: rem-calc(60);
-				color: get-color(navy);
+			.icon {
+				max-width: rem-calc(176);
+				height: auto;
 			}
-
-			p {
-				font-size: rem-calc(35);
-			}
-	}
-
-
-	/* HERO */
-	.hero {
-		position: relative;
-
-		img {
-			width: 100%;
-			height: auto;
-		}
-
-		figcaption {
-			position: absolute;
-			bottom: rem-calc(38);
-			left: rem-calc(60);
-			background-color: $white;
-			color: $medium-gray;
-			font-size: rem-calc(35);
-			max-width: rem-calc(375);
-			padding: rem-calc(13) rem-calc(25);
-		}
 
 	}
 
@@ -284,6 +229,55 @@
 	}
 
 
+	/* LISTING */
+	.listing {
+		list-style-type: none;
+		counter-reset: tt-counter;
+
+		* {
+			font-size: rem-calc(12);
+		}
+
+		li {
+			margin: 0 0 rem-calc(15);
+			padding-left: rem-calc(18);
+			position: relative;
+
+			&:before {
+				content: counter(tt-counter);
+				counter-increment: tt-counter;
+				background: get-color(turquoise);
+				font-size: rem-calc(10);
+				color: $black;
+				border-radius: 50%;
+				position: absolute;
+				left: rem-calc(-18);
+				padding: rem-calc(3) rem-calc(7);
+				line-height: normal;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+			h1 {
+				font-size: rem-calc(14);
+			}
+
+			p {
+				margin: 0;
+			}
+	}
+
+
+/* 
+ * *******************************************************************************
+ * LAYOUT COMPONENTS
+ * *******************************************************************************
+ */
+
+
 	/* GALLERY GRID */
 	.gallery-grid {
 		@include xy-grid;
@@ -299,9 +293,183 @@
 	}
 
 
+	/* MAP */
+	.map-container {
+	}
+	
+		.map {
+			background: $black;
+			position: relative;
+		}
+
+			.journey-time {
+				background: $medium-gray;
+				display: inline-block;
+				position: absolute;
+				bottom: rem-calc(25);
+				z-index: 1;
+			}
+
+		.map-key {
+			background: $light-gray;
+			padding: rem-calc(12) rem-calc(40);
+
+			h2 {
+				text-transform: uppercase;
+				font-size: rem-calc(14);
+				margin: 0 0 rem-calc(16);
+			}
+
+			.listing {
+
+				li {
+
+					&:before {
+						background: get-color(pink);
+						color: $white;
+					}
+				}
+			}
+		}
+
+
+	/* CALLOUT */
+	.callout {
+		width: rem-calc(260);
+		margin-bottom: rem-calc(40);
+		padding: rem-calc(20);
+
+		h2 {
+			text-transform: uppercase;
+			font-size: rem-calc(20);
+		}
+	}
+
+
+	/* CARD */
+	.card {
+
+		.card-section {
+			margin-top: rem-calc(15);
+			text-transform: uppercase;
+		}
+
+			h3 {
+				font-size: rem-calc(60);
+				color: get-color(navy);
+			}
+
+			p {
+				font-size: rem-calc(35);
+			}
+	}
+
+
+	/* HERO */
+	.hero {
+		position: relative;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		figcaption {
+			position: absolute;
+			bottom: rem-calc(38);
+			left: rem-calc(60);
+			background-color: $white;
+			color: $medium-gray;
+			font-size: rem-calc(35);
+			max-width: rem-calc(375);
+			padding: rem-calc(13) rem-calc(25);
+		}
+
+	}
+
+
+	/* GALLERY */
+	.gallery {
+
+		figure {
+			position: relative;
+		}
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			figcaption {
+				position: absolute;
+				bottom: rem-calc(116);
+				left: rem-calc(165);
+				width: 660px;
+				background: $white;
+				padding: rem-calc(40);
+
+				h2 {
+					font-size: rem-calc(30);
+					margin-bottom: rem-calc(32);
+				}
+
+				p {
+					font-size: rem-calc(16);
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+	}
+
+
+	/* KEY */
+	.key {
+		list-style-type: none;
+		margin: 0;
+
+		li {
+			position: relative;
+			padding-left: rem-calc(24);
+
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 6px;
+				transform: rotate(-45deg);
+			}
+		}
+
+		li.label-data-locale {
+
+			&:before {
+				@include css-triangle(9px, #DF1159, right);
+			}
+
+		}
+
+		li.label-data-urban-obs {
+
+			&:before {
+				@include css-triangle(9px, #00B2B6, right);
+			}
+
+		}
+	}
+
+
+	/* CALLOUT CONTAINER */
+	.callout-container {
+		position: absolute;
+		right: rem-calc(50);
+		top: rem-calc(-125);
+	}
+
+
 /* 
  * *******************************************************************************
- * COMPONENTS
+ * HIGH-LEVEL COMPONENTS
  * *******************************************************************************
  */
 
@@ -330,65 +498,183 @@
 	}
 
 
-	/* SLIDER */
-	.slider {
+	/* CUSTOM CONTENT */
+	.custom-content {
 
 		.inner {
 			padding: 0;
 		}
 	}
 
-		.orbit-controls {
 
-			button {
-				background: get-color(turquoise);
-				padding: rem-calc(18);
-				border-radius: 50%;
+	/* SLIDER */
+	.slider {
+		height: 100%;
 
-				&:hover,
-				&:active {
-					background: get-color(turquoise);
-				}
-			}
+		.inner {
+			padding: 0;
+			height: 100%;
 		}
 
-			.orbit-previous {
-				left: rem-calc(-45);
+			.button {
+				border-color: $white;
+				font-size: rem-calc(28);
+			}
+	}
+
+		.orbit {
+
+			.orbit-controls {
+
+				button {
+					border-radius: 50%;
+				}
+
+				.orbit-next {
+
+					img {
+						transform: rotate(180deg);
+					}
+				}
 			}
 
-			.orbit-next {
-				right: rem-calc(-45);
+				.orbit-slide {
+					
+					.inner {
+						padding-top: rem-calc(454);
+						padding-left: rem-calc(166);
+					}
+				}
+
+			&.orbit-large {
+				height: 100%;
+
+				.orbit-wrapper,
+				.orbit-container,
+				.orbit-slide,
+				.row {
+					height: 100%;
+				}
+
+					.orbit-controls {
+
+						button {
+							background: get-color(turquoise);
+							padding: rem-calc(16) rem-calc(20);
+							border-radius: 50%;
+
+							&:hover,
+							&:active {
+								background: get-color(turquoise);
+							}
+						}
+
+						.orbit-previous {
+							left: rem-calc(-50);
+							
+							img {
+								margin-right: rem-calc(6);
+							}
+						}
+
+						.orbit-next {
+							right: rem-calc(-50);
+
+							img {
+								margin-left: rem-calc(6);
+							}
+						}
+					}
 			}
+
+			&.orbit-small {
+				padding-bottom: rem-calc(50);
+
+				.orbit-controls {
+
+					button {
+						background: get-color(pink);
+						padding: rem-calc(9);
+					}
+				}
+
+					.orbit-previous {
+						left: 0;
+						top: 96%;
+					}
+
+					.orbit-next {
+						right: 0;
+						top: 96%;
+					}
+
+			}
+
+		}
 
 
 /* 
  * *******************************************************************************
- * DYNAMIC CONTENT
+ * PREFORMATTED COMPONENT: ILI - GREETING
  * *******************************************************************************
  */
 
 
-	/* ILI: GREETING */
+	/* GLOBAL */
 	.ili-greeting {
 
 		.inner {
-			padding: rem-calc(75) rem-calc(336) rem-calc(75) rem-calc(60);
+			padding: rem-calc(75) rem-calc(60);
 		}
 
 			.icon {
-				width: rem-calc(110);
-				height: rem-calc(110);
-				display: block;
-				margin-bottom: rem-calc(32);
+				margin-bottom: rem-calc(16);
 			}
 
-			svg {
-				fill: $white;
+			.lead {
+				margin-right: rem-calc(276)
 			}
 	}
 
+	/* SLIDER */
+	.slider {
 
-	/* URBAN OBSERVATORY: BANNER */
+		.ili-greeting {
+
+			.lead {
+				margin-bottom: rem-calc(300);
+				font-size: rem-calc(56);
+			}
+
+			.map-path {
+				float: left;
+				margin-right: rem-calc(60);
+			}
+
+			.cat-time {
+				float: left;
+
+				p {
+					font-size: rem-calc(35);
+				}
+			}
+
+			.more {
+				clear: both;
+				display: block;
+			}
+		}
+	}
+
+
+/* 
+ * *******************************************************************************
+ * PREFORMATTED COMPONENT: URBAN OBSERVATORY - BANNER
+ * *******************************************************************************
+ */
+
+
+	/* GLOBAL */
 	.urban-obs-banner {
 
 		.inner {
@@ -405,7 +691,14 @@
 	}
 
 
-	/* URBAN OBSERVATORY: RANDOM */
+/* 
+ * *******************************************************************************
+ * PREFORMATTED COMPONENT: URBAN OBSERVATORY - RANDOM
+ * *******************************************************************************
+ */
+
+
+	/* GLOBAL */
 	.urban-obs-random {
 
 		.inner {
@@ -419,8 +712,36 @@
 
 	}
 
+	/* SLIDER */
+	.slider {
 
-	/* URBAN OBSERVATORY: LOCALE */
+		.urban-obs-random {
+
+			.card-section {
+				margin-top: rem-calc(30);
+			}
+
+				h3 {
+					color: get-color(turquoise);
+				}
+
+				.lead {
+					margin-top: rem-calc(128);
+				}
+
+		}
+
+	}
+
+
+/* 
+ * *******************************************************************************
+ * PREFORMATTED COMPONENT: URBAN OBSERVATORY - LOCALE
+ * *******************************************************************************
+ */
+
+
+	/* GLOBAL */
 	.urban-obs-locale {
 
 		.inner {
@@ -443,8 +764,15 @@
 	}
 
 
-	/* PARTNER: EXCERPT */
-	.partner-excerpt {
+/* 
+ * *******************************************************************************
+ * PREFORMATTED COMPONENT: PARTNER - TEASER
+ * *******************************************************************************
+ */
+
+
+	/* GLOBAL */
+	.partner-teaser {
 
 		.inner {
 			padding: 0;
@@ -457,10 +785,109 @@
 	}
 
 
-	/* LOCAL */
+/* 
+ * *******************************************************************************
+ * PREFORMATTED COMPONENT: LOCAL
+ * *******************************************************************************
+ */
+
+
+	/* GLOBAL */
+	.partner-slide {
+
+		.inner {
+			padding: 0;
+			position: relative;
+		}
+
+			.section-label {
+				top: rem-calc(60);
+			}
+	}
+
+
+/* 
+ * *******************************************************************************
+ * PREFORMATTED COMPONENT: LOCAL
+ * *******************************************************************************
+ */
+
+
+	/* GLOBAL */
 	.locale {
 
 		.inner {
 			background-color: $light-gray;
+			padding: 0;
+			position: relative;
 		}
+
+
+			.map {
+				width: 100%;
+				min-height: rem-calc(990);
+			}
+
+				.map-key {
+
+					.cell:nth-child(2) {
+
+						.listing {
+							counter-reset: tt-counter 2;
+						}
+					}
+
+					.cell:nth-child(3) {
+
+						.listing {
+							counter-reset: tt-counter 4;
+						}
+					}
+
+					.cell:nth-child(4) {
+
+						.listing {
+							counter-reset: tt-counter 6;
+						}
+					}
+
+				}
+
+			.weather {
+				text-align: center;
+
+				p {
+					margin: 0;
+				}
+
+					object {
+						margin: rem-calc(10) 0;
+					}
+
+				&.cloudy {
+					background: get-color(mint);
+				}
+
+				&.partly-cloudy-day {
+					background: get-color(yellow);
+				}
+
+				&.partly-cloudy-night {
+					background: get-color(lavendar);
+				}
+			}
+
+			.events {
+
+				h2 {
+					overflow: auto;
+					margin-bottom: rem-calc(15);
+
+					img {
+						margin-right: rem-calc(15);
+						float: left;
+					}
+				}
+			}
+
 	}

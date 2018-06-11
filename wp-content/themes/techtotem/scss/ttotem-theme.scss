@@ -68,10 +68,6 @@
 									display: none;
 								}
 
-								.icon {
-									background-image: url("../img/icons/min/icon-placeholder.svg");
-								}
-
 							}
 
 							// ili
@@ -81,10 +77,6 @@
 									background: get-color(fuschia);
 								}
 
-								.icon {
-									background-image: url("../img/icons/min/icon-placeholder.svg");
-								}
-
 							}
 
 							// urban observatory
@@ -92,23 +84,6 @@
 
 								a {
 									background: get-color(turquoise);
-								}
-
-								.icon {
-									background-image: url("../img/icons/min/icon-placeholder.svg");
-								}
-
-							}
-
-							// partner
-							&:nth-child(4) {
-
-								a {
-									background: get-color(orange);
-								}
-
-								.icon {
-									background-image: url("../img/icons/min/icon-placeholder.svg");
 								}
 
 							}
