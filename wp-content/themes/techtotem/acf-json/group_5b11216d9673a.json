@@ -22,7 +22,7 @@
                 "urban-obs-random": "Urban Observatory: Random data",
                 "urban-obs-locale": "Urban Observatory: Locale summary",
                 "partner-teaser": "Partner: Banner\/Teaser",
-                "partner-full": "Partner page",
+                "partner-slide": "Partner: Page\/slide",
                 "locale": "Locale: Weather, events and suggested activity"
             },
             "default_value": [],
@@ -51,5 +51,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1528708614
+    "modified": 1528753532
 }
