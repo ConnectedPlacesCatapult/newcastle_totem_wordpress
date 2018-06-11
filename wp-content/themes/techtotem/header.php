@@ -53,11 +53,3 @@
 
 		<!-- CONTENT: MAIN -->
 		<div class="content-main">
-
-			<!-- TIME & TEMP -->
-			<section class="time-temp">
-
-				<time id="clock"></time>
-				<p>0&deg;</p>
-
-			</section><!-- .time-temp -->
