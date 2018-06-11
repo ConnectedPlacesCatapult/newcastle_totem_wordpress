@@ -9,6 +9,61 @@
 	],
 "creatorBuild": "26680",
 "files": {
+	"\/acf-json\/group_5b1006a5e453c.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5b1006a5e453c-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/acf-json\/group_5b111f741b2ad.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5b111f741b2ad-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/acf-json\/group_5b11216d9673a.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5b11216d9673a-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/acf-json\/group_5b1a7a5d2e02a.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5b1a7a5d2e02a-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/acf-json\/group_5b1e407488e69.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5b1e407488e69-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/acf-json\/group_5b1e43b1d42e7.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5b1e43b1d42e7-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/acf-json\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/acf-json\/index.php",
+		"oF": 0
+		},
 	"\/css\/app.css": {
 		"aP": 1,
 		"bl": 0,
@@ -40,63 +95,43 @@
 		"oAP": "\/header.php",
 		"oF": 0
 		},
-	"\/img\/Icons\/category-attractions.svg": {
+	"\/img\/icons\/category-attractions.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/category-attractions.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/category-culture.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/category-culture.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/category-food_drinks.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 0,
-		"oAP": "\/img\/icons\/min\/category-attractions.svg",
+		"oAP": "\/img\/icons\/min\/category-food_drinks.svg",
 		"oF": 3,
 		"opt": 1,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/img\/Icons\/category-culture.svg": {
+	"\/img\/icons\/category-tranquility.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 0,
-		"oAP": "\/img\/icons\/min\/category-culture.svg",
-		"oF": 3,
-		"opt": 1,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/img\/Icons\/category-events.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/img\/icons\/min\/category-events.svg",
-		"oF": 3,
-		"opt": 1,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/img\/Icons\/category-fooddrink.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/img\/icons\/min\/category-fooddrink.svg",
-		"oF": 3,
-		"opt": 1,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/img\/Icons\/category-tranquility.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/img\/icons\/min\/category-tranquility.svg",
-		"oF": 3,
-		"opt": 1,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/img\/Icons\/chevron.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 0,
-		"oAP": "\/img\/icons\/min\/chevron.svg",
-		"oF": 3,
-		"opt": 1,
+		"oA": 2,
+		"oAP": "\/img\/icons\/category-tranquility.svg",
+		"oF": 0,
+		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
@@ -107,6 +142,16 @@
 		"oAP": "\/img\/icons\/min\/data.svg",
 		"oF": 3,
 		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/events.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/events.svg",
+		"oF": 0,
+		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
@@ -125,6 +170,16 @@
 		"miP": 0,
 		"oA": 0,
 		"oAP": "\/img\/icons\/min\/icon-placeholder.svg",
+		"oF": 3,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/map-path.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "\/img\/icons\/min\/map-path.svg",
 		"oF": 3,
 		"opt": 1,
 		"plM": 3758088159,
@@ -150,11 +205,11 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/img\/icons\/min\/category-events.svg": {
+	"\/img\/icons\/min\/category-food_drinks.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/img\/icons\/min\/category-events.svg",
+		"oAP": "\/img\/icons\/min\/category-food_drinks.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -200,6 +255,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/img\/icons\/min\/events.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/min\/events.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/icons\/min\/home.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -220,6 +285,86 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/img\/icons\/min\/map-path.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/min\/map-path.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/min\/weather-cloudy.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/min\/weather-cloudy.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/min\/weather-partly-cloudy-day.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/min\/weather-partly-cloudy-day.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/min\/weather-partly-cloudy-night.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/min\/weather-partly-cloudy-night.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/weather-cloudy.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "\/img\/icons\/min\/weather-cloudy.svg",
+		"oF": 3,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/weather-partly-cloudy-day.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "\/img\/icons\/min\/weather-partly-cloudy-day.svg",
+		"oF": 3,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/weather-partly-cloudy-night.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "\/img\/icons\/min\/weather-partly-cloudy-night.svg",
+		"oF": 3,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/image-placeholder-portrait.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/image-placeholder-portrait.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/Image-placeholder.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -230,7 +375,27 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/img\/logos\/logo-urban-observatory.svg": {
+	"\/img\/logos\/min\/urbanobservatory-logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/logos\/min\/urbanobservatory-logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/logos\/min\/urbanobservatory-symbol.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/logos\/min\/urbanobservatory-symbol.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/logos\/urbanobservatory-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 0,
@@ -240,13 +405,13 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/img\/logos\/min\/logo-urban-observatory.svg": {
+	"\/img\/logos\/urbanobservatory-symbol.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
-		"oAP": "\/img\/logos\/min\/logo-urban-observatory.svg",
-		"oF": 0,
-		"opt": 0,
+		"oA": 0,
+		"oAP": "\/img\/logos\/min\/urbanobservatory-symbol.svg",
+		"oF": 3,
+		"opt": 1,
 		"plM": 3758088159,
 		"prP": 0
 		},
@@ -395,6 +560,13 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/template-parts\/acf-components\/component-custom-content.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/acf-components\/component-custom-content.php",
+		"oF": 0
+		},
 	"\/template-parts\/acf-components\/component-row.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -423,11 +595,18 @@
 		"oAP": "\/template-parts\/acf-components\/content-locale.php",
 		"oF": 0
 		},
-	"\/template-parts\/acf-components\/content-partner-excerpt.php": {
+	"\/template-parts\/acf-components\/content-partner-slide.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/template-parts\/acf-components\/content-partner-excerpt.php",
+		"oAP": "\/template-parts\/acf-components\/content-partner-slide.php",
+		"oF": 0
+		},
+	"\/template-parts\/acf-components\/content-partner-teaser.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/acf-components\/content-partner-teaser.php",
 		"oF": 0
 		},
 	"\/template-parts\/acf-components\/content-urban-obs-banner.php": {
@@ -449,6 +628,20 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/template-parts\/acf-components\/content-urban-obs-random.php",
+		"oF": 0
+		},
+	"\/template-parts\/api-data\/data-recommendations.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/api-data\/data-recommendations.php",
+		"oF": 0
+		},
+	"\/template-parts\/api-data\/data-sensors.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/api-data\/data-sensors.php",
 		"oF": 0
 		}
 	},
