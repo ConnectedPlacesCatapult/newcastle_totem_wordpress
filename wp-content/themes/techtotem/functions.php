@@ -123,10 +123,11 @@ function ttotem_theme_activation() {
 			acf_add_options_page(
 				array(
 					'page_title' 	=> 'Partner settings for this Tech Totem',
-					'menu_title'	=> 'Partner Settings',
+					'menu_title'	=> 'Totem Partner',
 					'menu_slug' 	=> 'partner-settings',
 					'capability'	=> 'edit_posts',
-					'redirect'		=> true
+					'redirect'		=> true,
+					'icon_url' 		=> 'dashicons-id-alt',
 				)
 			);
 	
