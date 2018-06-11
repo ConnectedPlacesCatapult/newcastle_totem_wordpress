@@ -18,9 +18,12 @@
 
 /* HEADER */
 get_header();
-?>
 
-	<?php
+	/* API DATA IN JSON FORMAT */
+	include( locate_template( 'template-parts/api-data/data-recommendations.php' ) );
+	// include( locate_template( 'template-parts/api-data/data-sensors.php' ) );
+
+
 	/* LOOP */
 	while ( have_posts() ) : the_post();
 	?>
@@ -32,6 +35,14 @@ get_header();
 			</header>
 
 			<div class="content">
+
+				<!-- TIME & TEMP -->
+				<section class="time-temp">
+
+					<time id="clock"></time>
+					<p><?php echo round( $tt_data_recommendations[0]->properties[0]->two_hour_temperature_forecast ); ?>&deg;C</p>
+
+				</section><!-- .time-temp -->
 
 				<?php
 				/* THE CONTENT */
@@ -46,12 +57,17 @@ get_header();
 						// slider
 						if ( get_row_layout() == 'tt_slider' ) : 
 
-							get_template_part( 'template-parts/acf-components/component', 'slider' );
+							include( locate_template( 'template-parts/acf-components/component-slider.php' ) );
 
-						// row
+						// preformatted components
 						elseif ( get_row_layout() == 'tt_row' ) : 
 
-							get_template_part( 'template-parts/acf-components/component', 'row' );
+							include( locate_template( 'template-parts/acf-components/component-row.php' ) );
+
+						// custom content
+						elseif ( get_row_layout() == 'tt_custom_content' ) : 
+
+							include( locate_template( 'template-parts/acf-components/component-custom-content.php' ) );
 
 						endif;
 
