@@ -11,6 +11,10 @@
  * @since 1.0
  * @version 1.0
  */
+
+	/* API DATA IN JSON FORMAT */
+	include( locate_template( 'template-parts/api-data/data-recommendations.php' ) );
+	// include( locate_template( 'template-parts/api-data/data-sensors.php' ) );
 ?>
 		</div><!-- .content-main -->
 
@@ -24,28 +28,28 @@
 	    		<li>
 	    			<a href="<?php echo home_url( '/' ); ?>">
 	    				<span>Home</span>
-	    				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/home.svg' ?>" class="icon"></object>
+	    				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/home.svg' ?>" width="50" height="50" class="icon"></object>
 	    			</a>
 	    		</li>
 
 	    		<li>
 	    			<a href="<?php echo home_url( '/ili/' ); ?>">
 	    				<span>Show me the way to</span>
-	    				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/icon-placeholder.svg' ?>" class="icon"></object>
+	    				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/category-' .  $tt_data_recommendations[0]->category . '.svg' ?>" width="50" height="50" class="icon <?php echo $tt_data_recommendations[0]->category; ?>"></object>
 	    			</a>
 	    		</li>
 
 	    		<li>
 	    			<a href="<?php echo home_url( '/urban-observatory/' ); ?>">
 	    				<span>Show me more data</span>
-	    				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/logos/min/urbanobservatory-symbol.svg' ?>" class="icon"></object>
+	    				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/logos/min/urbanobservatory-symbol.svg' ?>" width="50" height="50" class="icon"></object>
 	    			</a>
 	    		</li>
 
 	    		<li>
-	    			<a href="<?php echo home_url( '/parner/' ); ?>" style="background-color: <?php the_field( 'tt_partner_colour', 'option' ); ?>">
+	    			<a href="<?php echo home_url( '/partner/' ); ?>" style="background-color: <?php the_field( 'tt_partner_colour', 'option' ); ?>">
 	    				<span><?php the_field( 'tt_partner_name', 'option' ); ?></span>
-	    				<object type="image/svg+xml" data="<?php the_field( 'tt_partner_symbol', 'option' ); ?>" class="icon"></object>
+	    				<object type="image/svg+xml" data="<?php the_field( 'tt_partner_symbol', 'option' ); ?>" width="50" height="50" class="icon"></object>
 	    			</a>
 	    		</li>
 
