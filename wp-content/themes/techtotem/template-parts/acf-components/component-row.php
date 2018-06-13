@@ -22,9 +22,7 @@ $tt_content_component = get_sub_field( 'tt_dynamic_content' );
 <div class="row <?php echo $tt_clr_palette . ' ' . $tt_content_component; ?>">
 	<div class="inner grid-container">
 
-		<?php
-		include( locate_template( 'template-parts/acf-components/content-' . $tt_content_component . '.php' ) );
-		?>
+		<?php include( locate_template( 'template-parts/acf-components/content-' . $tt_content_component . '.php' ) ); ?>
 
 	</div><!-- .inner -->
 </div><!-- .row -->
