@@ -11,28 +11,8 @@
 
 
 <h2 class="section-label left" style="background-color: <?php the_field( 'tt_partner_colour', 'option' ); ?>">
-	<object type="image/svg+xml" data="<?php the_field( 'tt_partner_logo', 'option' ); ?>" class="icon"></object>
+	<img src="<?php the_field( 'tt_partner_logo', 'option' ); ?>" class="icon">
 </h2>
-
-<?php
-/* 
- * SLIDER 
- * Show multiple slides
- * */
-//if( have_rows( 'tt_slider_slides' ) ) : 
-
-	//$tt_slider_partner_slider = 1;
-
-/* 
- * REGULAR OL' ROW 
- * Show only 1 slide
- */
-//else : 
-
-	//$tt_slider_partner_slider = 0;
-
-//endif;
-?>
 
 <div class="gallery">
 
