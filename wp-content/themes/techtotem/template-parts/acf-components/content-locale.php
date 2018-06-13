@@ -16,7 +16,20 @@
 
 	<!-- MAP -->
 	<div class="map">
-		map
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
+
+		<div id="map" style="width: 100%; height: 990px;"></div>
+		<script>
+		mapboxgl.accessToken = 'pk.eyJ1IjoidGhhcnRuZWxsIiwiYSI6Im9RUHozYjQifQ.Rk3QrG_ymHOt9Jndsq_8Yg';
+		var map = new mapboxgl.Map({
+		    container: 'map',
+		    style: 'mapbox://styles/thartnell/cjh210gkj0quk2rqhgzwyi7cf',
+		    center: [-1.605, 54.976],
+		    zoom: 13,
+		});
+		</script>
+
 
 		<!-- JOURNEY TIME -->
 		<nav class="journey-time button-group">
@@ -33,7 +46,7 @@
 		<div class="cell small-3">
 
 			<h2>
-				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/category-tranquility.svg'; ?>" width="41" height="41" class="icon"></object>
+				<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-tranquility.svg'; ?>" width="41" height="41" class="icon">
 				Tranquility
 			</h2>
 
@@ -49,7 +62,7 @@
 		<div class="cell small-3">
 
 			<h2>
-				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/category-food_drinks.svg'; ?>" width="41" height="41" class="icon"></object>
+				<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-food_drinks.svg'; ?>" width="41" height="41" class="icon">
 				Food & Drink
 			</h2>
 
@@ -65,7 +78,7 @@
 		<div class="cell small-3">
 
 			<h2>
-				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/category-attractions.svg'; ?>" width="41" height="41" class="icon"></object>
+				<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-attractions.svg'; ?>" width="41" height="41" class="icon">
 				Attractions
 			</h2>
 
@@ -81,7 +94,7 @@
 		<div class="cell small-3">
 
 			<h2>
-				<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/category-culture.svg'; ?>" width="41" height="41" class="icon"></object>
+				<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-culture.svg'; ?>" width="41" height="41" class="icon">
 				Culture
 			</h2>
 
@@ -104,14 +117,14 @@
 	<!-- WEATHER -->
 	<aside class="callout weather <?php echo $tt_data_recommendations[0]->properties[0]->two_hour_weather_forecast; ?>">
 		<h2>1 hour forecast</h2>
-		<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/weather-' .  $tt_data_recommendations[0]->properties[0]->two_hour_weather_forecast . '.svg' ?>" width="175" height="195" class="icon"></object>
+		<img src="<?php echo get_template_directory_uri() . '/img/icons/min/weather-' .  $tt_data_recommendations[0]->properties[0]->two_hour_weather_forecast . '.svg' ?>" width="175" height="195" class="icon">
 		<p><?php echo round( $tt_data_recommendations[0]->properties[0]->two_hour_rain_forecast ); ?>% chance of rain</p>
 	</aside><!-- .weather -->
 
 	<!-- EVENTS -->
 	<div class="events callout gray">
 		<h2>
-			<object type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/img/icons/min/events.svg' ?>" width="65" height="65" class="icon"></object>
+			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-event.svg' ?>" width="65" height="65" class="icon">
 			Local Events
 		</h2>
 
