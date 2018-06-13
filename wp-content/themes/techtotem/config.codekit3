@@ -115,6 +115,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/img\/icons\/category-event.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/category-event.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/icons\/category-food_drinks.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -135,7 +145,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/img\/Icons\/data.svg": {
+	"\/img\/icons\/chevron.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/chevron.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/data.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 0,
@@ -145,17 +165,7 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/img\/icons\/events.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/img\/icons\/events.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/img\/Icons\/home.svg": {
+	"\/img\/icons\/home.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 0,
@@ -200,6 +210,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/img\/icons\/min\/category-culture.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/min\/category-event.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/min\/category-event.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -250,16 +270,6 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/img\/icons\/min\/data.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/img\/icons\/min\/events.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/img\/icons\/min\/events.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -365,7 +375,7 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/img\/Image-placeholder.svg": {
+	"\/img\/image-placeholder.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 0,
@@ -415,11 +425,11 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/img\/min\/Image-placeholder.svg": {
+	"\/img\/min\/image-placeholder.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/img\/min\/Image-placeholder.svg",
+		"oAP": "\/img\/min\/image-placeholder.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -595,11 +605,11 @@
 		"oAP": "\/template-parts\/acf-components\/content-locale.php",
 		"oF": 0
 		},
-	"\/template-parts\/acf-components\/content-partner-slide.php": {
+	"\/template-parts\/acf-components\/content-partner-main.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/template-parts\/acf-components\/content-partner-slide.php",
+		"oAP": "\/template-parts\/acf-components\/content-partner-main.php",
 		"oF": 0
 		},
 	"\/template-parts\/acf-components\/content-partner-teaser.php": {
@@ -628,6 +638,27 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/template-parts\/acf-components\/content-urban-obs-random.php",
+		"oF": 0
+		},
+	"\/template-parts\/acf-components\/slide-ili-greeting.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/acf-components\/slide-ili-greeting.php",
+		"oF": 0
+		},
+	"\/template-parts\/acf-components\/slide-partner-main.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/acf-components\/slide-partner-main.php",
+		"oF": 0
+		},
+	"\/template-parts\/acf-components\/slide-urban-obs-random.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/acf-components\/slide-urban-obs-random.php",
 		"oF": 0
 		},
 	"\/template-parts\/api-data\/data-recommendations.php": {
