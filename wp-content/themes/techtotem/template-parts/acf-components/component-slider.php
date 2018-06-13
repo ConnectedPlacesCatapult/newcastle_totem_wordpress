@@ -14,11 +14,11 @@
 if( have_rows( 'tt_slider_slides' ) ) : 
 ?>	
 
-	<div class="slider <?php echo $tt_clr_palette; ?>">
+	<div class="slider">
 		<div class="inner grid-container">
 
 			<!-- ORBIT -->
-			<div class="orbit orbit-large" role="region" aria-label="Favorite Space Pictures" data-orbit data-auto-play="0" data-swipe="1" data-accessible="1">
+			<div class="orbit orbit-large" role="region" data-orbit data-auto-play="1" data-swipe="1" data-accessible="1">
 
 				<!-- ORBIT WRAPPER -->
 				<div class="orbit-wrapper">
@@ -28,14 +28,26 @@ if( have_rows( 'tt_slider_slides' ) ) :
 
 						<?php
 						while ( have_rows( 'tt_slider_slides' ) ) : the_row();
-
-							// get dynamic content selected for this row
-							$tt_content_component = get_sub_field( 'tt_dynamic_content' );
-							?>
+						?>
 
 							<li class="orbit-slide">
 
-								<?php include( locate_template( 'template-parts/acf-components/component-row.php' ) ); ?>
+								<?php
+								// get colour palette
+								$tt_clr_palette = get_sub_field( 'tt_colour_scheme' );
+
+								// get dynamic content selected for this row
+								$tt_content_component = get_sub_field( 'tt_dynamic_content' );
+								//echo $tt_content_component;
+								?>
+
+								<div class="row <?php echo $tt_clr_palette . ' ' . $tt_content_component; ?>">
+									<div class="inner grid-container">
+
+										<?php include( locate_template( 'template-parts/acf-components/slide-' . $tt_content_component . '.php' ) ); ?>
+
+									</div><!-- .inner -->
+								</div><!-- .row -->
 
 							</li>
 
