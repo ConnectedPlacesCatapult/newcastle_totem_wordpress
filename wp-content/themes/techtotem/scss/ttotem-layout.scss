@@ -18,40 +18,24 @@
 	/* BODY */
 	html,
 	body {
-		//background: yellow;
 		height: 100%;
 	}
 
 
 		/* WRAPPER */
 		.wrapper {
-			//background: orange;
 			height: 100%;
 		}
 
 
 			/* WRAPPER: INNER */
-			.wrapper-inner {
-				//background: green;
-				//height: 100%;
-			}
+			/* .wrapper-inner {
+			} */
 
 
 				/* CONTENT: MAIN */
 				.content-main {
-					//background: blue;
 					position: relative;
-					//height: 100%;
-
-					article {
-						//background: pink;
-						//height: 100%;
-					}
-
-						.content {
-							//background: purple;
-							//height: 100%;
-						}
 				}
 
 
@@ -64,10 +48,6 @@
 						z-index: 1;
 					}
 
-					/* .inner {
-						background-color: rgba($white, 0.3);
-					} */
-
 
 				/* NAVBAR */
 				.navbar {
@@ -78,3 +58,19 @@
 					width: 100%;
 					z-index: 11;
 				}
+
+
+/* 
+ * *******************************************************************************
+ * SCREENSAVER
+ * *******************************************************************************
+ */
+.page-screensaver {
+
+	.content-main, 
+	article,
+	.orbit-slide {
+		height: 100%;
+	}
+
+}

@@ -77,6 +77,10 @@
 									background: get-color(fuschia);
 								}
 
+									img {
+										filter: invert(100%);
+									}
+
 							}
 
 							// urban observatory
@@ -97,6 +101,7 @@
 								font-size: rem-calc(22);
 								text-align: left;
 								padding: rem-calc(10) rem-calc(25) rem-calc(10) rem-calc(35);
+								margin: 0;
 							}
 
 								span {
