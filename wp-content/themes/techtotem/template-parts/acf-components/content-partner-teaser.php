@@ -10,7 +10,7 @@
 ?>
 
 <h2 class="section-label right" style="background-color: <?php the_field( 'tt_partner_colour', 'option' ); ?>">
-	<object type="image/svg+xml" data="<?php the_field( 'tt_partner_logo', 'option' ); ?>" class="icon"></object>
+	<img src="<?php the_field( 'tt_partner_logo', 'option' ); ?>" class="icon">
 </h2>
 
 <?php
