@@ -133,6 +133,16 @@ function ttotem_theme_activation() {
 	
 		}
 
+		/* PAGE SLUG IN BODY CLASS */
+		function ttotem_add_slug_body_class( $classes ) {
+			global $post;
+			if ( isset( $post ) ) {
+				$classes[] = $post->post_type . '-' . $post->post_name;
+			}
+			return $classes;
+		}
+		add_filter( 'body_class', 'ttotem_add_slug_body_class' );
+
 
 } // end theme activation
 add_action( 'init', 'ttotem_theme_activation' );
