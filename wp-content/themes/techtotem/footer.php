@@ -67,6 +67,16 @@
 	wp_footer();
 	?>
 
+	<?php
+	echo '<div style="display: none;">Recommendation data <pre>';
+	print_r($tt_data_recommendations);
+	echo '</pre></div>';
+
+	echo '<div style="display: none;">Sensor data <pre>';
+	print_r($tt_data_sensors);
+	echo '</pre></div>';
+	?>
+
 </body>
 	
 </html>
