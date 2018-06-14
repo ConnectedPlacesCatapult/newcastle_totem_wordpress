@@ -21,7 +21,7 @@ get_header();
 
 	/* API DATA IN JSON FORMAT */
 	include( locate_template( 'template-parts/api-data/data-recommendations.php' ) );
-	// include( locate_template( 'template-parts/api-data/data-sensors.php' ) );
+	include( locate_template( 'template-parts/api-data/data-sensors.php' ) );
 
 
 	/* LOOP */
