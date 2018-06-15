@@ -53,9 +53,10 @@ jQuery(function($) {
 			//console.log(heightNavbar);
 
 			var heightWrapper = $( '.wrapper' ).outerHeight();
-			//onsole.log(heightWrapper);
+			//console.log(heightWrapper);
 
 			var heightContent = heightWrapper - heightNavbar;
+
 			$( '.page-screensaver .content, .page-screensaver .orbit-container' ).height( heightContent);
 		}
 
