@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="161px" viewBox="0 0 160 161" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Imageplaceholder</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Imageplaceholder/UrbanObvsIcon" transform="translate(0.000000, 1.000000)">
+            <g id="Imageplaceholder">
+                <rect id="Rectangle-4" fill="#F1ECEC" x="0" y="0" width="160" height="160"></rect>
+                <path d="M0.0739759806,0.134687041 L159.270286,158.257273" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                <path d="M0.729683895,0.13491649 L159.270316,158.257043" id="Line-Copy" stroke="#979797" stroke-linecap="square" transform="translate(80.000000, 79.195980) scale(-1, 1) translate(-80.000000, -79.195980) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
