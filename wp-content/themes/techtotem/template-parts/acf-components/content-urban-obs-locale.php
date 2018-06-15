@@ -26,111 +26,75 @@
 		<!-- ORBIT CONTAINER -->
 		<ul class="orbit-container">
 
-			<!-- ORBIT SLIDE -->
-			<li class="orbit-slide">
+			<?php
+			/* GALLERY SHOWING DATA SENSORS */
 
-				<ul class="gallery-grid">
+				// Convert object into array
+				function objectToArray($d) {
 
-					<li class="locale-data label-data-locale navy">
+					if (is_object($d)) {
+					    $d = get_object_vars($d); // gets the properties of the given object with get_object_vars function
+					}
 
-						<a href="<?php echo home_url( '/urban-observatory-data-record/' ); ?>?sensor=xxxx">
+					if (is_array($d)) {
+					    /*
+					    * Return array converted to object
+					    * Using __FUNCTION__ (Magic constant)
+					    * for recursive call
+					    */
+					    return array_map(__FUNCTION__, $d);
+					}
+					else {	    
+					    return $d; // return array
+					}
+				}
+				$init = $tt_data_sensors;
+				$tt_data_sensors_gallery = objectToArray($init);
 
-							<h2><i class="icon icon-placeholder"></i> Slide 1</h2>
-							<p>75.3dB</p>
+				// split array into groups of 4 and keep original key
+				$tt_data_sensors_gallery = array_chunk( $tt_data_sensors_gallery, 4, true);
 
-						</a>
+				// Create the slides
+				foreach($tt_data_sensors_gallery as $tt_data_sensors_gallery_slide) : 
+				?>
 
-					</li>
+					<!-- ORBIT SLIDE -->
+					<li class="orbit-slide">
 
-					<li class="locale-data label-data-urban-obs blue">
+						<ul class="gallery-grid">
+							<?php
+							// Loop through each of the items in the array for the current slide
+							foreach ($tt_data_sensors_gallery_slide as $key => $value) :
 
-						<a href="<?php echo home_url( '/urban-observatory-data-record/' ); ?>?sensor=xxxx">
+								// get the data sensor source
+								if( $tt_data_sensors_gallery_slide[$key]["local"] == 1 ) : 
+								 	$tt_label_data = 'locale';
+								else : 
+								 	$tt_label_data = 'urban-obs';
+								endif;
+								?>
 
-							<h2><i class="icon icon-placeholder"></i> Data Name</h2>
-							<p>75.3dB</p>
-							
-						</a>
+								<li class="locale-data label-data-<?php echo $tt_label_data; ?>">
 
-					</li>
+									<a href="<?php echo home_url( '/urban-observatory-data-record/' ); ?>?sensor=<?php echo $tt_data_sensors_gallery_slide[$key]["name"]; ?>">
 
-					<li class="locale-data label-data-urban-obs blue">
+										<img src="<?php echo get_template_directory_uri() . '/img/icons/min/sensor-' . $tt_data_sensors_gallery_slide[$key]["name"] . '.svg'; ?>" width="110" height="110" alt="">
 
-						<a href="<?php echo home_url( '/urban-observatory-data-record/' ); ?>?sensor=xxxx">
+										<h2><?php echo $tt_data_sensors_gallery_slide[$key]["label"]; ?></h2>
 
-							<h2><i class="icon icon-placeholder"></i> Data Name</h2>
-							<p>75.3dB</p>
-							
-						</a>
+										<p><?php echo $tt_data_sensors_gallery_slide[$key]["reading"] . $tt_data_sensors_gallery_slide[$key]["unit"]; ?></p>
 
-					</li>
+									</a>
 
-					<li class="locale-data label-data-locale navy">
+								</li>
 
-						<a href="<?php echo home_url( '/urban-observatory-data-record/' ); ?>?sensor=xxxx">
+							<?php endforeach; ?>
 
-							<h2><i class="icon icon-placeholder"></i> Data Name</h2>
-							<p>75.3dB</p>
-							
-						</a>
+						</ul>
 
-					</li>
+					</li><!-- .orbit-slide -->
 
-				</ul>
-
-			</li><!-- .orbit-slide -->
-
-			<!-- ORBIT SLIDE -->
-			<li class="orbit-slide">				
-
-				<ul class="gallery-grid">
-
-					<li class="locale-data label-data-locale navy">
-
-						<a href="<?php echo home_url( '/urban-observatory-data-record/' ); ?>?sensor=xxxx">
-
-							<h2><i class="icon icon-placeholder"></i> Slide 2</h2>
-							<p>75.3dB</p>
-
-						</a>
-
-					</li>
-
-					<li class="locale-data label-data-urban-obs blue">
-
-						<a href="<?php echo home_url( '/urban-observatory-data-record/' ); ?>?sensor=xxxx">
-
-							<h2><i class="icon icon-placeholder"></i> Data Name</h2>
-							<p>75.3dB</p>
-							
-						</a>
-
-					</li>
-
-					<li class="locale-data label-data-urban-obs blue">
-
-						<a href="<?php echo home_url( '/urban-observatory-data-record/' ); ?>?sensor=xxxx">
-
-							<h2><i class="icon icon-placeholder"></i> Data Name</h2>
-							<p>75.3dB</p>
-							
-						</a>
-
-					</li>
-
-					<li class="locale-data label-data-locale navy">
-
-						<a href="<?php echo home_url( '/urban-observatory-data-record/' ); ?>?sensor=xxxx">
-
-							<h2><i class="icon icon-placeholder"></i> Data Name</h2>
-							<p>75.3dB</p>
-							
-						</a>
-
-					</li>
-
-				</ul>
-
-			</li><!-- .orbit-slide -->
+				<?php endforeach; ?>
 
 		</ul><!-- .orbit-container -->
 
