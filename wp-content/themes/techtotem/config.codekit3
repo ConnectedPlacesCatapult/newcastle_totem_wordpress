@@ -849,6 +849,16 @@
 		"oAP": "\/js\/min\/app.min.js.map",
 		"oF": 0
 		},
+	"\/js\/SnakeAnim.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/SnakeAnim.js",
+		"oF": 3,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/node_modules": {
 		"ft": 65536,
 		"oA": 2,
