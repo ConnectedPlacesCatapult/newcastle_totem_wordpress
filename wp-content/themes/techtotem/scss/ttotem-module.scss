@@ -109,36 +109,6 @@
 		}
 	}
 
-		/* 
-
-		&.home {
-
-			i {
-				background-image: url('../img/icons/min/home.svg');
-			}
-		}
-
-		&.directions {
-
-			i {
-				background-image: url('../img/icons/min/category-tranquility.svg');
-			}
-		}
-
-		&.data {
-
-			i {
-				background-image: url('../img/icons/min/data.svg');
-			}
-		}
-
-		&.sponsor {
-
-			i {
-				background-image: url('../img/icons/min/sponsor.svg');
-			}
-		} */
-
 
 	/* SECTION-LABEL */
 	.section-label {
@@ -184,17 +154,17 @@
 			display: block;
 		 }
 
+			img {
+				width: rem-calc(110);
+				height: rem-calc(110);
+				display: block;
+				margin: 0 auto rem-calc(15);
+			}
+
 		 	h2 {
 				 margin: 0 auto;
 				 font-size: rem-calc(30);
 		 	}
-
-			 	.icon {
-			 		width: rem-calc(110);
-				 	height: rem-calc(110);
-				 	display: block;
-				 	margin: 0 auto rem-calc(15);
-				 }
 
 			p {
 				margin: 0;
@@ -292,6 +262,11 @@
 
 		li {
 			margin-bottom: rem-calc(74);
+			background: get-color(blue);
+
+			&:nth-child(3n+1) {
+				background: get-color(navy);
+			}
 		}
 
 	}
@@ -397,11 +372,13 @@
 
 		figure {
 			position: relative;
+			overflow: hidden;
 		}
 
 			img {
 				width: 100%;
 				height: auto;
+				max-width: none;
 			}
 
 			figcaption {
@@ -922,16 +899,23 @@
 						margin: rem-calc(10) 0;
 					}
 
-				&.cloudy {
-					background: get-color(mint);
-				}
-
-				&.partly-cloudy-day {
+				&.clear-day,
+				&.wind {
 					background: get-color(yellow);
 				}
 
-				&.partly-cloudy-night {
+				&.clear-night,
+				&.partly-cloudy-night, {
 					background: get-color(lavendar);
+				}
+
+				&.partly-cloudy-day,
+				&.cloudy,
+				&.rain,
+				&.sleet,
+				&.snow,
+				&.fog {
+					background: get-color(mint);
 				}
 			}
 
