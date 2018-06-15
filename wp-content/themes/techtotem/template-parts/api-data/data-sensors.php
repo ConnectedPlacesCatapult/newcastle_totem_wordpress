@@ -24,6 +24,4 @@
 	$tt_data_sensors_contents = file_get_contents( $tt_data_sensors_url );
 
 	// decode the JSON feed
-	$tt_data_sensors = json_decode( $tt_data_sensors_contents );
-
-	//echo $data_recommendations[0]->category;
+	$tt_data_sensors = json_decode( $tt_data_sensors_contents, true );
