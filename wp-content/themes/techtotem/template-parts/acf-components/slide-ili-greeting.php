@@ -10,14 +10,14 @@
 ?>
 
 
-<p class="lead"><?php echo str_replace( '_', '<br>', $tt_data_recommendations[0]->action_msg ); ?></p>
+<p class="lead"><?php echo $recom_msg; ?></p>
 
 <div class="greeting-icons">
 
 	<img src="<?php echo get_template_directory_uri() . '/img/icons/min/map-path.svg'; ?>" width="507" height="173" class="map-path">
 
 	<div class="cat-time">
-		<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-' .  $tt_data_recommendations[0]->category . '.svg'; ?>" width="210" height="210" class="icon">
+		<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-' .  $tt_category . '.svg'; ?>" width="210" height="210" class="icon">
 		<p>XX min walk</p>
 	</div>
 
