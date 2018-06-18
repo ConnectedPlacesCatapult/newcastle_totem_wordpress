@@ -26,4 +26,21 @@
 	// decode the JSON feed
 	$tt_data_recommendations = json_decode( $tt_data_recommendations_contents );
 
-	//echo $tt_data_recommendations[0]->category;
+
+/* VARS */
+
+	// recommendation message
+	$recom_msg = str_replace( '_', '<br>', $tt_data_recommendations[0]->action_msg );
+
+	// weather forecast
+	$weather_forecast = $tt_data_recommendations[0]->properties[0]->two_hour_weather_forecast;
+	$rain_forecast = round( $tt_data_recommendations[0]->properties[0]->two_hour_rain_forecast );
+
+	// categories
+	$tt_category = strtolower( str_replace( ' ', '-', $tt_data_recommendations[0]->category ) );
+
+	// sub-categories
+	$tt_category_sub = strtolower( str_replace( ' ', '-', $tt_data_recommendations[0]->properties[0]->subcategory ) );
+
+	// amenities
+	$tt_amenities =  $tt_data_recommendations[0]->properties[0]->amenities;
