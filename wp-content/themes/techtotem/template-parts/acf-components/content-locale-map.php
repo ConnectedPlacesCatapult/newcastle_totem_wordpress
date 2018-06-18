@@ -117,7 +117,7 @@
 
 		L.mapbox.accessToken = 'pk.eyJ1IjoidGhhcnRuZWxsIiwiYSI6Im9RUHozYjQifQ.Rk3QrG_ymHOt9Jndsq_8Yg';
 		var map = L.mapbox.map('map').setView([54.976,-1.605], 13);
-		L.mapbox.styleLayer('mapbox://styles/thartnell/cjh210gkj0quk2rqhgzwyi7cf').addTo(map);
+		L.mapbox.styleLayer('mapbox://styles/thartnell/cjikda40704fg2rnp6cm5vsl4').addTo(map);
 
 		// In case we are using the icons
 	    // var tranquility_icon = L.icon({
