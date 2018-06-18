@@ -85,21 +85,35 @@
 
 <!-- MAP -->
 <div class="map">
+
 	<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
 	<script src='<?php echo get_template_directory_uri() . "/js/min/SnakeAnim.js"; ?>'></script>
 	<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
 
 	<!-- JOURNEY TIME -->
 	<nav class="journey-time button-group">
-		<button class="button" id="route_direct"><i class="icon route_brisk"></i> 7 <abbr title="minutes">mins</abbr></button>
-		<button class="button" id="route_leisure"><i class="icon route_leisure"></i> 15 <abbr title="minutes">mins</abbr></button>
-		<button class="button" id="route_curious"><i class="icon route_curious"></i> 20 <abbr title="minutes">mins</abbr></button>
+
+		<button class="button" id="route_direct">
+			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/map-route-direct.svg' ?>" width="160" height="50" class="icon"> 
+			<span>7 <abbr title="minutes">mins</abbr></span>
+		</button>
+		<button class="button" id="route_leisure">
+			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/map-route-leisure.svg' ?>" width="160" height="50" class="icon"> 
+			<span>15 <abbr title="minutes">mins</abbr></span>
+		</button>
+		<button class="button" id="route_curious">
+			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/map-route-curious.svg' ?>" width="160" height="50" class="icon"> 
+			<span>20 <abbr title="minutes">mins</abbr></span>
+		</button>
+
 	</nav><!-- .journey-time-->
 
+	<!-- Mapbox -->
 	<div id="map" style="width: 100%; height: 990px;"></div>
+
 		<script>
 		// Get the json data
-		var recommendation = <?php echo json_encode( $tt_data_recommendations); ?>;
+		var recommendation = <?php echo json_encode( $tt_data_recommendations ); ?>;
 
 		L.mapbox.accessToken = 'pk.eyJ1IjoidGhhcnRuZWxsIiwiYSI6Im9RUHozYjQifQ.Rk3QrG_ymHOt9Jndsq_8Yg';
 		var map = L.mapbox.map('map').setView([54.976,-1.605], 13);
@@ -107,7 +121,7 @@
 
 		// In case we are using the icons
 	    // var tranquility_icon = L.icon({
-	    //     iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/category-tranquility.svg'; ?>",
+	    //     iconUrl: "<?php //echo get_template_directory_uri() . '/img/icons/min/category-tranquility.svg'; ?>",
 	    //     iconSize: [38, 95], // size of the icon
 	    //     });
 
@@ -127,7 +141,10 @@
 					}).addTo(map);
 
 				icon.bindPopup(element.name);
-				icon_counter = icon_counter +1 ;	
+				
+				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
+
+				icon_counter = icon_counter +1;
 			}
 
 			else if (element.category == 'attractions'){
@@ -140,7 +157,10 @@
 					}).addTo(map);
 
 				icon.bindPopup(element.name);
-				icon_counter = icon_counter +1 ;	
+				
+				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
+
+				icon_counter = icon_counter +1;
 			}
 
 			else if (element.category == 'culture'){
@@ -153,7 +173,10 @@
 					}).addTo(map);
 
 				icon.bindPopup(element.name);
-				icon_counter = icon_counter +1 ;	
+
+				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
+
+				icon_counter = icon_counter +1;
 			}
 
 			else if (element.category == 'food_drinks'){
@@ -166,7 +189,10 @@
 					}).addTo(map);
 
 				icon.bindPopup(element.name);
-				icon_counter = icon_counter +1 ;	
+
+				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
+				
+				icon_counter = icon_counter +1;
 			}
 
 		});

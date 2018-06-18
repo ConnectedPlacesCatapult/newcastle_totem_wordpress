@@ -14,11 +14,6 @@
 <!-- MAP CONTAINER -->
 <aside class="map-container">
 
-	<?php
-	/* MAP */
-	include( locate_template( 'template-parts/acf-components/content-locale-map.php' ) );
-	?>
-
 	<!-- MAP KEY -->
 	<div class="map-key grid-x">
 
@@ -29,28 +24,7 @@
 				Tranquility
 			</h2>
 
-			<ol class="listing">
-
-				<li>Name lorem ipsum dolor sit amet lorem ipsum dolor</li>
-				<li>Name lorem ipsum dolor sit amet lorem ipsum dolor</li>
-
-			</ol>
-
-		</div>
-
-		<div class="cell small-3">
-
-			<h2>
-				<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-food_drinks.svg'; ?>" width="41" height="41" class="icon">
-				Food & Drink
-			</h2>
-
-			<ol class="listing">
-
-				<li>Name lorem ipsum dolor sit amet lorem ipsum dolor</li>
-				<li>Name lorem ipsum dolor sit amet lorem ipsum dolor</li>
-
-			</ol>
+			<ol class="listing" id="tranquility"></ol>
 
 		</div>
 
@@ -61,12 +35,7 @@
 				Attractions
 			</h2>
 
-			<ol class="listing">
-
-				<li>Name lorem ipsum dolor sit amet lorem ipsum dolor</li>
-				<li>Name lorem ipsum dolor sit amet lorem ipsum dolor</li>
-
-			</ol>
+			<ol class="listing" id="attractions"></ol>
 
 		</div>
 
@@ -77,16 +46,27 @@
 				Culture
 			</h2>
 
-			<ol class="listing">
+			<ol class="listing" id="culture"></ol>
 
-				<li>Name lorem ipsum dolor sit amet lorem ipsum dolor</li>
-				<li>Name lorem ipsum dolor sit amet lorem ipsum dolor</li>
+		</div>
 
-			</ol>
+		<div class="cell small-3">
+
+			<h2>
+				<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-food_drinks.svg'; ?>" width="41" height="41" class="icon">
+				Food & Drink
+			</h2>
+
+			<ol class="listing" id="food_drinks"></ol>
 
 		</div>
 
 	</div><!-- .key -->
+	
+	<?php
+	/* MAP */
+	include( locate_template( 'template-parts/acf-components/content-locale-map.php' ) );
+	?>
 
 </aside><!-- .map-container -->
 
@@ -94,10 +74,10 @@
 <div class="callout-container">
 
 	<!-- WEATHER -->
-	<aside class="callout weather <?php echo $tt_data_recommendations[0]->properties[0]->two_hour_weather_forecast; ?>">
+	<aside class="callout weather <?php echo $weather_forecast; ?>">
 		<h2>1 hour forecast</h2>
-		<img src="<?php echo get_template_directory_uri() . '/img/icons/min/weather-' .  $tt_data_recommendations[0]->properties[0]->two_hour_weather_forecast . '.svg' ?>" width="175" height="195" class="icon">
-		<p><?php echo round( $tt_data_recommendations[0]->properties[0]->two_hour_rain_forecast ); ?>% chance of rain</p>
+		<img src="<?php echo get_template_directory_uri() . '/img/icons/min/weather-' .  $weather_forecast . '.svg' ?>" width="175" height="195" class="icon">
+		<p><?php echo $rain_forecast; ?>% chance of rain</p>
 	</aside><!-- .weather -->
 
 	<!-- EVENTS -->
@@ -108,7 +88,7 @@
 		</h2>
 
 		<!-- ORBIT -->
-		<div class="orbit orbit-small" role="region" aria-label="Local events" data-orbit>
+		<div class="orbit orbit-small" role="region" aria-label="Local events" data-orbit data-auto-play="0" data-swipe="1" data-accessible="1">
 
 			<!-- ORBIT WRAPPER -->
 			<div class="orbit-wrapper">
@@ -116,8 +96,8 @@
 				<!-- ORBIT CONTROLS -->
 				<div class="orbit-controls">
 
-					<button class="orbit-previous"><img src="<?php echo get_template_directory_uri() . '/img/icons/min/chevron.svg'; ?>" width="19" height="10" alt=""></button>
-					<button class="orbit-next"><img src="<?php echo get_template_directory_uri() . '/img/icons/min/chevron.svg'; ?>" width="19" height="10" alt=""></button>
+					<button class="orbit-previous"><img src="<?php echo get_template_directory_uri() . '/img/icons/min/chevron.svg'; ?>" width="14" height="5" alt=""></button>
+					<button class="orbit-next"><img src="<?php echo get_template_directory_uri() . '/img/icons/min/chevron.svg'; ?>" width="14" height="5" alt=""></button>
 
 				</div><!-- .orbit-controls -->
 
