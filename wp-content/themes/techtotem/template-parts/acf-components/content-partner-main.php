@@ -33,7 +33,7 @@
 
 	elseif( get_field( 'tt_partner_teaser_content_type' , 'option' ) == 'complex' ) : 
 
-		// simple content
+		// complex content
 		the_field( 'tt_partner_slide_code', 'option' );
 
 	else : 
