@@ -213,7 +213,7 @@
 		}
 
 		li {
-			margin: 0 0 rem-calc(15);
+			margin: 0 rem-calc(10) rem-calc(10) 0;
 			padding-left: rem-calc(18);
 			position: relative;
 
@@ -226,8 +226,11 @@
 				border-radius: 50%;
 				position: absolute;
 				left: rem-calc(-18);
-				padding: rem-calc(3) rem-calc(7);
+				padding: rem-calc(4);
 				line-height: normal;
+				width: 22px;
+				height: 22px;
+				text-align: center;
 			}
 
 			&:last-child {
@@ -282,11 +285,52 @@
 		}
 
 			.journey-time {
-				background: $medium-gray;
 				display: inline-block;
 				position: absolute;
+				left: rem-calc(25);
 				bottom: rem-calc(25);
 				z-index: 1;
+
+				button {
+					position: relative;
+					padding: 0;
+					margin: 0 rem-calc(10);
+					background: rgba($white, 0.9);
+
+					* {
+						color: get-color(fuschia);
+					}
+
+					img {
+						filter: invert(100%);
+					}
+
+					span {
+						position: absolute;
+						right: 15px;
+						bottom: 5px;
+						z-index: 1;
+						font-size: rem-calc(10);
+					}
+
+					&:hover,
+					&:active {
+						background: get-color(fuschia);
+
+						* {
+							color: $white;
+						}
+
+						img {
+							filter: invert(0%);
+						}
+					}
+				}
+
+					abbr {
+						border: none;
+						cursor: pointer;
+					}
 			}
 
 		.map-key {
@@ -592,7 +636,7 @@
 
 					button {
 						background: get-color(pink);
-						padding: rem-calc(9);
+						padding: rem-calc(8) rem-calc(12);
 					}
 				}
 
@@ -842,7 +886,7 @@
 
 /* 
  * *******************************************************************************
- * PREFORMATTED COMPONENT: LOCAL
+ * PREFORMATTED COMPONENT: LOCALE
  * *******************************************************************************
  */
 
@@ -856,7 +900,7 @@
 			position: relative;
 		}
 
-			/* .map {
+			/* .map-container {
 			} */
 
 				.map-key {
@@ -865,24 +909,31 @@
 						margin-right: rem-calc(10);
 					}
 
+					.cell:nth-child(1) {
+
+						.listing {
+							counter-reset: tt-counter 0;
+						}
+					}
+
 					.cell:nth-child(2) {
 
 						.listing {
-							counter-reset: tt-counter 2;
+							counter-reset: tt-counter 3;
 						}
 					}
 
 					.cell:nth-child(3) {
 
 						.listing {
-							counter-reset: tt-counter 4;
+							counter-reset: tt-counter 6;
 						}
 					}
 
 					.cell:nth-child(4) {
 
 						.listing {
-							counter-reset: tt-counter 6;
+							counter-reset: tt-counter 9;
 						}
 					}
 
