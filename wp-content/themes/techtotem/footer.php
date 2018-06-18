@@ -35,7 +35,7 @@
 	    		<li>
 	    			<a href="<?php echo home_url( '/ili/' ); ?>">
 	    				<span>Show me the way to</span>
-	    				<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-' .  $tt_data_recommendations[0]->category . '.svg' ?>" width="50" height="50" class="icon <?php echo $tt_data_recommendations[0]->category; ?>">
+	    				<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-sub-' .  $tt_category_sub . '.svg'; ?>" width="50" height="50" class="icon">
 	    			</a>
 	    		</li>
 
@@ -65,16 +65,6 @@
 	 * into the footer
 	 */
 	wp_footer();
-	?>
-
-	<?php
-	echo '<div style="display: none;">Recommendation data <pre>';
-	print_r($tt_data_recommendations);
-	echo '</pre></div>';
-
-	echo '<div style="display: none;">Sensor data <pre>';
-	print_r($tt_data_sensors);
-	echo '</pre></div>';
 	?>
 
 </body>
