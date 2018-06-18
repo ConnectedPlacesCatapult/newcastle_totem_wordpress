@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="160px" height="161px" viewBox="0 0 160 161" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
-    <title>Imageplaceholder</title>
+    <title>Icons/Urbanobservatory/Data/humidity</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Imageplaceholder/UrbanObvsIcon" transform="translate(0.000000, 1.000000)">
-            <g id="Imageplaceholder">
-                <rect id="Rectangle-4" fill="#F1ECEC" x="0" y="0" width="160" height="160"></rect>
-                <path d="M0.0739759806,0.134687041 L159.270286,158.257273" id="Line" stroke="#979797" stroke-linecap="square"></path>
-                <path d="M0.729683895,0.13491649 L159.270316,158.257043" id="Line-Copy" stroke="#979797" stroke-linecap="square" transform="translate(80.000000, 79.195980) scale(-1, 1) translate(-80.000000, -79.195980) "></path>
-            </g>
-        </g>
+    <defs>
+        <polygon id="path-1" points="2 2 156.956958 2 156.956958 156.957031 2 156.957031"></polygon>
+    </defs>
+    <g id="Icons/Urbanobservatory/Data/humidity" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <g id="Clip-2"></g>
+        <path d="M67.5585191,85.4385139 C66.9628116,85.4385139 43.7192569,115.238505 43.7192569,133.117038 C43.7192569,146.229181 54.4471076,156.957031 67.5585191,156.957031 C80.6699305,156.957031 91.3977812,146.229181 91.3977812,133.117038 C91.3977812,115.238505 68.1542265,85.4385139 67.5585191,85.4385139 M133.117038,31.7992604 C132.521331,31.7992604 109.277776,61.5992518 109.277776,79.4785156 C109.277776,92.5899271 120.005627,103.317778 133.117038,103.317778 C146.229181,103.317778 156.957031,92.5899271 156.957031,79.4785156 C156.957031,61.5992518 133.713477,31.7992604 133.117038,31.7992604 M25.8392621,2 C25.2435547,2 2,31.7992604 2,49.6792552 C2,62.7913976 12.7278507,73.5185174 25.8392621,73.5185174 C38.9506736,73.5185174 49.6792552,62.7913976 49.6792552,49.6792552 C49.6792552,31.7992604 26.4349696,2 25.8392621,2" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
     </g>
 </svg>

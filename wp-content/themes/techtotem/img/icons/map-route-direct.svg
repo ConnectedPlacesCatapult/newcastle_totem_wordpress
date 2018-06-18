@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="50px" viewBox="0 0 160 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/ILI/walk-times/01/active</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons/ILI/walk-times/01/active" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-4" x="0" y="0" width="160" height="50"></rect>
+        <g id="Group" transform="translate(38.000000, 10.000000)" stroke="#FFFFFF">
+            <path d="M63.7483364,8.84573182 C62.2893818,11.58105 58.8892909,12.6163227 56.1533818,11.1573682 C53.4180636,9.69782273 52.3827909,6.29773182 53.8417455,3.56241364 C55.3007,0.827095455 58.7007909,-0.208177273 61.4367,1.25018636 C64.1726091,2.70914091 65.2072909,6.10982273 63.7483364,8.84573182 Z" id="Stroke-1" stroke-width="2"></path>
+            <path d="M11.1580182,28.3468545 C9.69906364,31.0827636 6.29897273,32.1174455 3.56306364,30.6584909 C0.827745455,29.1995364 -0.207527273,25.7988545 1.25142727,23.0641273 C2.71038182,20.3282182 6.11047273,19.2929455 8.84638182,20.7519 C11.5817,22.2108545 12.6169727,25.6109455 11.1580182,28.3468545 Z" id="Stroke-3" stroke-width="2"></path>
+            <path d="M10.8005182,23.4511136 C10.8005182,23.4511136 33.2840182,6.66220455 53.5652,6.76325" id="Stroke-5" stroke-width="3"></path>
+        </g>
+    </g>
+</svg>
