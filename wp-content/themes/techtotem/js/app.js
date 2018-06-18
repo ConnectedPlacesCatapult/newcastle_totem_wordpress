@@ -63,20 +63,15 @@ jQuery(function($) {
 
 		/* MAP */
 		function tt_map() {
+
+			// set height
 			var mapHeight = $( '.map' ).innerHeight();
 			$('#map').height( mapHeight );
+
+			// switch order of map and map key around
+			// fixes weird bug where the js wouldn't write the list of places to the list items in the map-key.
+			$('.map-key').insertAfter('.map');
 		}
-
-
-		/* JSON DATA */
-		/*function tt_json_data() {
-
-			$.getJSON(  'https://s3-eu-west-1.amazonaws.com/southside.tech.totem/recommendation-totem-1.json', function(data) {
-
-				//console.log(data.solar.name);
-
-			});
-		}*/
 
 
 
@@ -96,7 +91,6 @@ jQuery(function($) {
 			tt_content_bottom_spacing();
 			tt_slider_large();
 			tt_map();
-			//tt_json_data();
 
 	    });
 
