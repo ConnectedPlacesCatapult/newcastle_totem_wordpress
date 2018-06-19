@@ -74,6 +74,13 @@ get_header();
 					endwhile;
 
 				endif;
+				
+				/* DATA SENSOR */
+				if( is_page( 'urban-observatory-data-record' ) ) : 
+
+					include( locate_template( 'template-parts/acf-components/component-data-record.php' ) );
+
+				endif;
 				?>
 
 			</div>
