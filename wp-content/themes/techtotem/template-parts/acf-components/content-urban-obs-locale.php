@@ -48,20 +48,21 @@
 
 								// get the data sensor source
 								if( $tt_data_sensors_gallery_slide[$key]["local"] == 1 ) : 
-								 	$tt_label_data = 'locale';
+								 	$tt_sensor_slide_source = 'locale';
 								else : 
-								 	$tt_label_data = 'urban-obs';
+								 	$tt_sensor_slide_source = 'urban-obs';
 								endif;
 
+								$tt_sensor_slide_key = str_replace( 'data-', '', $tt_data_sensors_gallery_slide[$key]["name"] );
 								$tt_sensor_slide_name = $tt_data_sensors_gallery_slide[$key]["name"];
 								$tt_sensor_slide_label = $tt_data_sensors_gallery_slide[$key]["label"];
 								$tt_sensor_slide_reading = $tt_data_sensors_gallery_slide[$key]["reading"];
 								$tt_sensor_slide_unit = $tt_data_sensors_gallery_slide[$key]["units"];
 								?>
 
-								<li class="locale-data label-data-<?php echo $tt_label_data; ?>">
+								<li class="locale-data label-data-<?php echo $tt_sensor_slide_source; ?>">
 
-									<a href="<?php echo home_url( '/urban-observatory-data-record/' ); ?>?sensor=<?php echo $tt_sensor_slide_name; ?>">
+									<a href="<?php echo home_url( '/urban-observatory-data-record/' ); ?>?sensor=<?php echo $tt_sensor_slide_key; ?>">
 
 										<img src="<?php echo get_template_directory_uri() . '/img/icons/min/sensor-' . $tt_sensor_slide_name . '.svg'; ?>" width="110" height="110" alt="">
 
@@ -73,7 +74,7 @@
 
 								</li>
 
-							<?php endforeach; ?>
+								<?php endforeach; ?>
 
 						</ul>
 

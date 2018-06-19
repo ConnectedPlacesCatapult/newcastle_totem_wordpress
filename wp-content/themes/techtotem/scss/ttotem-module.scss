@@ -143,6 +143,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		background: get-color(blue);
 
 		* {
 			color: $white;
@@ -825,6 +826,13 @@
 						margin-left: $global-margin;
 					}
 			}
+	}
+
+	.data-record {
+
+		.inner {
+			padding: rem-calc(75) rem-calc(60);
+		}
 	}
 
 
