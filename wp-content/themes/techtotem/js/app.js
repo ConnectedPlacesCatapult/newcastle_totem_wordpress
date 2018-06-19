@@ -49,14 +49,10 @@ jQuery(function($) {
 		/* SCREENSAVER */
 		function tt_slider_large() {
 
+			// set height
 			var heightNavbar = $( '.navbar' ).outerHeight();
-			//console.log(heightNavbar);
-
 			var heightWrapper = $( '.wrapper' ).outerHeight();
-			//console.log(heightWrapper);
-
 			var heightContent = heightWrapper - heightNavbar;
-
 			$( '.page-screensaver .content, .page-screensaver .orbit-container' ).height( heightContent);
 		}
 
