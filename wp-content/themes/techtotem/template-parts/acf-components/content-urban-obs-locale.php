@@ -10,7 +10,7 @@
 ?>
 
 <!-- ORBIT -->
-<div class="orbit orbit-large" role="region" aria-label="Local sensor data" data-timer-delay="10000" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+<div class="orbit orbit-large" role="region" aria-label="Local sensor data" data-orbit data-auto-play="0" data-swipe="1" data-accessible="1">
 
 	<!-- ORBIT WRAPPER -->
 	<div class="orbit-wrapper">
