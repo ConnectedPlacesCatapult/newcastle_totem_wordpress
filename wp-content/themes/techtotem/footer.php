@@ -35,7 +35,7 @@
 	    		<li>
 	    			<a href="<?php echo home_url( '/ili/' ); ?>">
 	    				<span>Show me the way to</span>
-	    				<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-sub-' .  $tt_category_sub . '.svg'; ?>" width="50" height="50" class="icon">
+	    				<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-' .  $tt_category . '.svg'; ?>" width="50" height="50" class="icon">
 	    			</a>
 	    		</li>
 
