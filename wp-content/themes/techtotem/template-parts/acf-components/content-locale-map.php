@@ -95,15 +95,15 @@
 
 		<button class="button" id="route_direct">
 			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/map-route-direct.svg' ?>" width="160" height="50" class="icon"> 
-			<span>7 <abbr title="minutes">mins</abbr></span>
+			<span>XX <abbr title="minutes">mins</abbr></span>
 		</button>
 		<button class="button" id="route_leisure">
 			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/map-route-leisure.svg' ?>" width="160" height="50" class="icon"> 
-			<span>15 <abbr title="minutes">mins</abbr></span>
+			<span>XX <abbr title="minutes">mins</abbr></span>
 		</button>
 		<button class="button" id="route_curious">
 			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/map-route-curious.svg' ?>" width="160" height="50" class="icon"> 
-			<span>20 <abbr title="minutes">mins</abbr></span>
+			<span>XX <abbr title="minutes">mins</abbr></span>
 		</button>
 
 	</nav><!-- .journey-time-->
