@@ -15,7 +15,7 @@
 	  height: 24px !important;
 	  margin-left: -12px;
 	  margin-top: -12px;
-	  border-radius: 18px;
+	  border-radius: 30px;
 	  border: 2px solid #E71D73;
 	  text-align: center;
 	  color: #fff;
@@ -27,7 +27,7 @@
 	  height: 24px !important;
 	  margin-left: -12px;
 	  margin-top: -12px;
-	  border-radius: 25px;
+	  border-radius: 30px;
 	  border: 2px solid #00B2B6;
 	  text-align: center;
 	  color: #fff;
@@ -95,15 +95,15 @@
 
 		<button class="button" id="route_direct">
 			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/map-route-direct.svg' ?>" width="160" height="50" class="icon"> 
-			<span>XX <abbr title="minutes">mins</abbr></span>
+			<span>7 <abbr title="minutes">mins</abbr></span>
 		</button>
 		<button class="button" id="route_leisure">
 			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/map-route-leisure.svg' ?>" width="160" height="50" class="icon"> 
-			<span>XX <abbr title="minutes">mins</abbr></span>
+			<span>15 <abbr title="minutes">mins</abbr></span>
 		</button>
 		<button class="button" id="route_curious">
 			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/map-route-curious.svg' ?>" width="160" height="50" class="icon"> 
-			<span>XX <abbr title="minutes">mins</abbr></span>
+			<span>20 <abbr title="minutes">mins</abbr></span>
 		</button>
 
 	</nav><!-- .journey-time-->
@@ -125,7 +125,6 @@
 	    //     iconSize: [38, 95], // size of the icon
 	    //     });
 
-		var icon_counter = 1;
 		recommendation[0].properties[0].amenities.forEach(function(element) {
 			if (element.category == 'tranquility'){
 
@@ -136,7 +135,7 @@
 				var icon = L.marker([element.coordinates[1], element.coordinates[0]], {
 					  icon: L.divIcon({
 					      className: 'circle-map-icon',
-					      html: icon_counter.toString()
+					      html: element.counter.toString()
 					  })
 					}).addTo(map);
 
@@ -144,7 +143,6 @@
 				
 				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
 
-				icon_counter = icon_counter +1;
 			}
 
 			else if (element.category == 'attractions'){
@@ -152,7 +150,7 @@
 				var icon = L.marker([element.coordinates[1], element.coordinates[0]], {
 					  icon: L.divIcon({
 					      className: 'circle-map-icon',
-					      html: icon_counter.toString()
+					      html: element.counter.toString()
 					  })
 					}).addTo(map);
 
@@ -160,7 +158,6 @@
 				
 				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
 
-				icon_counter = icon_counter +1;
 			}
 
 			else if (element.category == 'culture'){
@@ -168,7 +165,7 @@
 				var icon = L.marker([element.coordinates[1], element.coordinates[0]], {
 					  icon: L.divIcon({
 					      className: 'circle-map-icon',
-					      html: icon_counter.toString()
+					      html: element.counter.toString()
 					  })
 					}).addTo(map);
 
@@ -176,7 +173,6 @@
 
 				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
 
-				icon_counter = icon_counter +1;
 			}
 
 			else if (element.category == 'food_drinks'){
@@ -184,7 +180,7 @@
 				var icon = L.marker([element.coordinates[1], element.coordinates[0]], {
 					  icon: L.divIcon({
 					      className: 'circle-map-icon',
-					      html: icon_counter.toString()
+					      html: element.counter.toString()
 					  })
 					}).addTo(map);
 
@@ -192,21 +188,92 @@
 
 				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
 				
-				icon_counter = icon_counter +1;
+			}
+
+			else if (element.category == 'event'){
+
+				var icon = L.marker([element.coordinates[1], element.coordinates[0]], {
+					  icon: L.divIcon({
+					      className: 'circle-map-icon-destination',
+					      html: element.counter.toString()
+					  })
+					}).addTo(map);
+
+				icon.bindPopup(element.name);
+
+				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
+				
 			}
 
 		});
 
 		// Destination
-		var icon = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]], {
-			  icon: L.divIcon({
-			      className: 'circle-map-icon-destination',
-			      html: '1'
-			  })
-			}).addTo(map);
-		icon.bindPopup(recommendation[0].name);
+
+		if (recommendation[0].category == 'food_drinks'){
+		    var destination_icon = L.icon({
+		        iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/category-food_drinks.svg'; ?>",
+		        iconSize: [75, 75], // size of the icon
+		        iconAnchor:   [22, 94] // offset of the icon
+		        });
+
+			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
+				{icon: destination_icon}).addTo(map);			
+		} 
+
+		else if (recommendation[0].category == 'tranquility'){
+		    var destination_icon = L.icon({
+		        iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/category-tranquility.svg'; ?>",
+		        iconSize: [75, 75], 
+		        iconAnchor:   [22, 94]
+		        });
+
+			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
+				{icon: destination_icon}).addTo(map);			
+		} 
+
+		else if (recommendation[0].category == 'culture'){
+		    var destination_icon = L.icon({
+		        iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/category-culture.svg'; ?>",
+		        iconSize: [75, 75], 
+		        iconAnchor:   [22, 94]
+		        });
+
+			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
+				{icon: destination_icon}).addTo(map);			
+		} 
+
+		else if (recommendation[0].category == 'attractions'){
+		    var destination_icon = L.icon({
+		        iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/category-attractions.svg'; ?>",
+		        iconSize: [75, 75], 
+		        iconAnchor:   [22, 94]
+		        });
+
+			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
+				{icon: destination_icon}).addTo(map);			
+		} 
+
+		else if (recommendation[0].category == 'event'){
+		    var destination_icon = L.icon({
+		        iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/category-event.svg'; ?>",
+		        iconSize: [75, 75], 
+		        iconAnchor:   [22, 94]
+		        });
+
+			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
+				{icon: destination_icon}).addTo(map);			
+		} 
 
 		// Totem location
+
+	 //    var totem_icon = L.icon({
+	 //        iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/category-tranquility.svg'; ?>",
+	 //        iconSize: [100, 100], // size of the icon
+	 //        });
+
+		// var marker = L.marker([recommendation[0].totem_coords[1], recommendation[0].totem_coords[0]],
+		// 	{icon: totem_icon}).addTo(map);
+		
 		var icon = L.marker([recommendation[0].totem_coords[1], recommendation[0].totem_coords[0]], {
 			  icon: L.divIcon({
 			      className: 'circle-map-icon-destination',
