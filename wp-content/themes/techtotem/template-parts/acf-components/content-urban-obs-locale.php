@@ -28,28 +28,8 @@
 
 			<?php
 			/* GALLERY SHOWING DATA SENSORS */
-
-				// Convert object into array
-				function objectToArray($d) {
-
-					if (is_object($d)) {
-					    $d = get_object_vars($d); // gets the properties of the given object with get_object_vars function
-					}
-
-					if (is_array($d)) {
-					    /*
-					    * Return array converted to object
-					    * Using __FUNCTION__ (Magic constant)
-					    * for recursive call
-					    */
-					    return array_map(__FUNCTION__, $d);
-					}
-					else {	    
-					    return $d; // return array
-					}
-				}
-				$init = $tt_data_sensors;
-				$tt_data_sensors_gallery = objectToArray($init);
+				$get_data_sensor = $tt_data_sensors;
+				$tt_data_sensors_gallery = objectToArray($get_data_sensor);
 
 				// split array into groups of 4 and keep original key
 				$tt_data_sensors_gallery = array_chunk( $tt_data_sensors_gallery, 4, true);
@@ -72,17 +52,22 @@
 								else : 
 								 	$tt_label_data = 'urban-obs';
 								endif;
+
+								$tt_sensor_slide_name = $tt_data_sensors_gallery_slide[$key]["name"];
+								$tt_sensor_slide_label = $tt_data_sensors_gallery_slide[$key]["label"];
+								$tt_sensor_slide_reading = $tt_data_sensors_gallery_slide[$key]["reading"];
+								$tt_sensor_slide_unit = $tt_data_sensors_gallery_slide[$key]["units"];
 								?>
 
 								<li class="locale-data label-data-<?php echo $tt_label_data; ?>">
 
-									<a href="<?php echo home_url( '/urban-observatory-data-record/' ); ?>?sensor=<?php echo $tt_data_sensors_gallery_slide[$key]["name"]; ?>">
+									<a href="<?php echo home_url( '/urban-observatory-data-record/' ); ?>?sensor=<?php echo $tt_sensor_slide_name; ?>">
 
-										<img src="<?php echo get_template_directory_uri() . '/img/icons/min/sensor-' . $tt_data_sensors_gallery_slide[$key]["name"] . '.svg'; ?>" width="110" height="110" alt="">
+										<img src="<?php echo get_template_directory_uri() . '/img/icons/min/sensor-' . $tt_sensor_slide_name . '.svg'; ?>" width="110" height="110" alt="">
 
-										<h2><?php echo $tt_data_sensors_gallery_slide[$key]["label"]; ?></h2>
+										<h2><?php echo $tt_sensor_slide_label; ?></h2>
 
-										<p><?php echo $tt_data_sensors_gallery_slide[$key]["reading"] . $tt_data_sensors_gallery_slide[$key]["unit"]; ?></p>
+										<p><?php echo $tt_sensor_slide_reading . $tt_sensor_slide_unit; ?></p>
 
 									</a>
 

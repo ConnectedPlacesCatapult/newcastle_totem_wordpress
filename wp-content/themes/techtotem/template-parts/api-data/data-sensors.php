@@ -25,3 +25,46 @@
 
 	// decode the JSON feed
 	$tt_data_sensors = json_decode( $tt_data_sensors_contents, true );
+
+
+/* GALLERY SHOWING DATA SENSORS */
+
+	// Convert object into array
+	function objectToArray($d) {
+
+		if (is_object($d)) {
+		    $d = get_object_vars($d); // gets the properties of the given object with get_object_vars function
+		}
+
+		if (is_array($d)) {
+		    /*
+		    * Return array converted to object
+		    * Using __FUNCTION__ (Magic constant)
+		    * for recursive call
+		    */
+		    return array_map(__FUNCTION__, $d);
+		}
+		else {	    
+		    return $d; // return array
+		}
+	}
+
+
+/* RANDOM DATA SENSOR */
+
+	// get random index from sensor data array
+	$tt_data_sensor_randomise = array_rand($tt_data_sensors);
+
+	// create var to hold randomly selected sensor data
+	$tt_data_sensor_random = $tt_data_sensors[$tt_data_sensor_randomise];
+	//echo '<pre>'; print_r($tt_data_sensor_random); echo '</pre>';
+	//echo $tt_data_sensor_random["label"];
+
+	// vars
+	$tt_sensor_random_name = $tt_data_sensor_random["name"];
+	$tt_sensor_random_label = $tt_data_sensor_random["label"];
+	$tt_sensor_random_reading = $tt_data_sensor_random["reading"];
+	$tt_sensor_random_unit = $tt_data_sensor_random["units"];
+	$tt_sensor_random_updated =  date( "d M Y, h:ia", $tt_data_sensor_random["timestamp"]);
+	$tt_sensor_random_tagline = $tt_data_sensor_random["tagline"];
+	$tt_sensor_random_source = $tt_data_sensor_random["source"];

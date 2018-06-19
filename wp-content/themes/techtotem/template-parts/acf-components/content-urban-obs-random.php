@@ -7,15 +7,6 @@
  * @since 1.0
  * @version 1.0
  */
-
-
-// get random index from sensor data array
-$tt_data_sensors_randomise = array_rand($tt_data_sensors);
-
-// create var to hold randomly selected sensor data
-$tt_data_sensors_random = $tt_data_sensors[$tt_data_sensors_randomise];
-//echo '<pre>'; print_r($tt_data_sensors_random); echo '</pre>';
-//echo $tt_data_sensors_random["label"];
 ?>
 
 
@@ -27,12 +18,12 @@ $tt_data_sensors_random = $tt_data_sensors[$tt_data_sensors_randomise];
 
 		<a href="<?php echo home_url( '/urban-observatory/' ); ?>">
 
-			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/sensor-' . $tt_data_sensors_random["name"] . '.svg'; ?>" width="160" height="160" alt="">
+			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/sensor-' . $tt_sensor_random_name . '.svg'; ?>" width="160" height="160" alt="">
 
 			<div class="card-section">
 
-				<h3><?php echo $tt_data_sensors_random["label"]; ?></h3>
-				<p><?php echo $tt_data_sensors_random["tagline"]; ?></p>
+				<h3><?php echo $tt_sensor_random_label; ?></h3>
+				<p><?php echo $tt_sensor_random_tagline; ?></p>
 
 			</div>
 
