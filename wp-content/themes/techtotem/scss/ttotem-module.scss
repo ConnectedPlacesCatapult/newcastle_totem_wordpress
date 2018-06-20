@@ -807,33 +807,41 @@
 
 
 	/* GLOBAL */
+	.urban-obs-locale,
+	.data-record {
+
+		.grid-x {
+			margin-left: rem-calc(36);
+			margin-right: rem-calc(36);
+			color: get-color(navy);
+
+			p {
+				text-align: right;
+			}
+
+				img {
+					margin-left: $global-margin;
+				}
+		}
+	}
+
 	.urban-obs-locale {
 
 		.inner {
 			padding: rem-calc(100) rem-calc(63);
 		}
-
-			.grid-x {
-				margin-left: rem-calc(36);
-				margin-right: rem-calc(36);
-				color: get-color(navy);
-
-				p {
-					text-align: right;
-				}
-
-					img {
-						margin-left: $global-margin;
-					}
-			}
 	}
 
 	.data-record {
 
 		.inner {
-			padding: rem-calc(75) rem-calc(60);
+			padding: rem-calc(75) rem-calc(12);
 		}
 	}
+
+		.sensor-graph {
+			margin-top: rem-calc(30);
+		}
 
 
 /* 
