@@ -103,8 +103,8 @@
 	<div class="cell small-6">
 		
 		<p>
-			<img src="<?php echo get_template_directory_uri() . '/img/min/image-placeholder.svg'; ?>" width="84" height="45" alt="UKCRIC">		
-			<img src="<?php echo get_template_directory_uri() . '/img/min/image-placeholder.svg'; ?>" width="84" height="45" alt="Newcastle University">
+			<img src="<?php echo get_template_directory_uri() . '/img/logos/min/ukcric-logo.svg'; ?>" width="84" height="45" alt="UKCRIC">		
+			<img src="<?php echo get_template_directory_uri() . '/img/logos/min/newcastleuni-logo.svg'; ?>" width="84" height="45" alt="Newcastle University">
 		</p>
 
 	</div>
