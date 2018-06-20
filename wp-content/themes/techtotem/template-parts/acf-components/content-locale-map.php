@@ -44,7 +44,8 @@
 	  -o-animation: fadein 1s; /* Opera < 12.1 */
 	  animation: fadein 1s;
 	}
-	.leaflet-marker-icon,
+
+/*	.leaflet-marker-icon,
 	.leaflet-marker-shadow {
 	  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
 	  -moz-animation: fadein 3s; /* Firefox < 16 */
@@ -80,7 +81,7 @@
 	@-o-keyframes fadein {
 	    from { opacity: 0; }
 	    to   { opacity: 1; }
-	}
+	}*/
 </style>
 
 <!-- MAP -->
@@ -88,6 +89,12 @@
 
 	<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
 	<script src='<?php echo get_template_directory_uri() . "/js/min/SnakeAnim.js"; ?>'></script>
+	<script src='<?php echo get_template_directory_uri() . "/js/min/leaflet.markercluster-src.js"; ?>'></script>
+	<script src='<?php echo get_template_directory_uri() . "/js/min/leaflet-gesture-handling.js"; ?>'></script>
+
+	<link href='<?php echo get_template_directory_uri() . "/css/min/leaflet-gesture-handling"; ?>' rel='text/css' />
+	<link href='<?php echo get_template_directory_uri() . "/css/min/MarkerCluster.css"; ?>' rel='stylesheet' />
+	<link href='<?php echo get_template_directory_uri() . "/css/min/MarkerCluster.Default.css"; ?>' rel='stylesheet' />
 	<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
 
 	<!-- JOURNEY TIME -->
@@ -116,33 +123,43 @@
 		var recommendation = <?php echo json_encode( $tt_data_recommendations ); ?>;
 
 		L.mapbox.accessToken = 'pk.eyJ1IjoidGhhcnRuZWxsIiwiYSI6Im9RUHozYjQifQ.Rk3QrG_ymHOt9Jndsq_8Yg';
-		var map = L.mapbox.map('map').setView([54.976,-1.605], 13);
+		var map = L.mapbox.map('map', 'https://api.mapbox.com/v3/mapbox.dark.json', {gestureHandling: true}).setView([54.976,-1.605], 13);
+		// var map = L.mapbox.map("map", {
+		//     center: [54.976,-1.605],
+		//     zoom: 13,
+		//     gestureHandling: true
+		// });
 		L.mapbox.styleLayer('mapbox://styles/thartnell/cjikda40704fg2rnp6cm5vsl4').addTo(map);
 
-		// In case we are using the icons
-	    // var tranquility_icon = L.icon({
-	    //     iconUrl: "<?php //echo get_template_directory_uri() . '/img/icons/min/category-tranquility.svg'; ?>",
-	    //     iconSize: [38, 95], // size of the icon
-	    //     });
+		document.getElementsByClassName( 'leaflet-control-attribution' )[0].style.display = 'none';
+
+		var markers = L.markerClusterGroup({
+			maxClusterRadius: 20,
+			iconCreateFunction: function (cluster) {
+				var markers = cluster.getAllChildMarkers();
+				return L.icon({ iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/group.svg'; ?>",
+					iconSize: [50, 50]});
+			},
+		//Disable all of the defaults:
+		spiderfyOnMaxZoom: true, showCoverageOnHover: false, zoomToBoundsOnClick: true
+		});
+
+		var markerList = [];
 
 		recommendation[0].properties[0].amenities.forEach(function(element) {
 			if (element.category == 'tranquility'){
-
-				// In case we are using the icons
-				// var marker = L.marker([element.coordinates[1], element.coordinates[0]],
-				// 	{icon: tranquility_icon}).addTo(map);
 
 				var icon = L.marker([element.coordinates[1], element.coordinates[0]], {
 					  icon: L.divIcon({
 					      className: 'circle-map-icon',
 					      html: element.counter.toString()
 					  })
-					}).addTo(map);
+					});
 
 				icon.bindPopup(element.name);
 				
 				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
-
+				markerList.push(icon);
 			}
 
 			else if (element.category == 'attractions'){
@@ -152,12 +169,12 @@
 					      className: 'circle-map-icon',
 					      html: element.counter.toString()
 					  })
-					}).addTo(map);
+					});
 
 				icon.bindPopup(element.name);
 				
 				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
-
+				markerList.push(icon);
 			}
 
 			else if (element.category == 'culture'){
@@ -167,12 +184,12 @@
 					      className: 'circle-map-icon',
 					      html: element.counter.toString()
 					  })
-					}).addTo(map);
+					});
 
 				icon.bindPopup(element.name);
 
 				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
-
+				markerList.push(icon);
 			}
 
 			else if (element.category == 'food_drinks'){
@@ -182,12 +199,12 @@
 					      className: 'circle-map-icon',
 					      html: element.counter.toString()
 					  })
-					}).addTo(map);
+					});
 
 				icon.bindPopup(element.name);
 
 				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
-				
+				markerList.push(icon);
 			}
 
 			else if (element.category == 'event'){
@@ -197,12 +214,12 @@
 					      className: 'circle-map-icon-destination',
 					      html: element.counter.toString()
 					  })
-					}).addTo(map);
+					});
 
 				icon.bindPopup(element.name);
 
 				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
-				
+				markerList.push(icon);
 			}
 
 		});
@@ -217,7 +234,8 @@
 		        });
 
 			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
-				{icon: destination_icon}).addTo(map);			
+				{icon: destination_icon}).addTo(map);
+			markerList.push(marker);
 		} 
 
 		else if (recommendation[0].category == 'tranquility'){
@@ -228,7 +246,8 @@
 		        });
 
 			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
-				{icon: destination_icon}).addTo(map);			
+				{icon: destination_icon});			
+			markerList.push(marker);
 		} 
 
 		else if (recommendation[0].category == 'culture'){
@@ -239,7 +258,8 @@
 		        });
 
 			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
-				{icon: destination_icon}).addTo(map);			
+				{icon: destination_icon}).addTo(map);	
+			markerList.push(marker);
 		} 
 
 		else if (recommendation[0].category == 'attractions'){
@@ -250,7 +270,8 @@
 		        });
 
 			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
-				{icon: destination_icon}).addTo(map);			
+				{icon: destination_icon}).addTo(map);		
+			markerList.push(marker);
 		} 
 
 		else if (recommendation[0].category == 'event'){
@@ -261,7 +282,8 @@
 		        });
 
 			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
-				{icon: destination_icon}).addTo(map);			
+				{icon: destination_icon}).addTo(map);
+			markerList.push(marker);
 		} 
 
 		// Totem location
@@ -279,7 +301,13 @@
 			      className: 'circle-map-icon-destination',
 			      html: 'T'
 			  })
-			}).addTo(map);
+			});
+		markerList.push(icon);
+
+
+		// Add Markers to clustergroup
+		markers.addLayers(markerList);
+		map.addLayer(markers);
 
 		zoomToAmenities();
 
@@ -335,13 +363,12 @@
 			var minlng = Math.min.apply(null, lons),
 			  maxlng = Math.max.apply(null, lons);
 
-			// totem point 
-			var point = L.latLng(recommendation[0].totem_coords[1], recommendation[0].totem_coords[0]);
-
 			var zoom_level = (map.fitBounds([
 			    [minlat, minlng],
 			    [maxlat, maxlng]]
-			  ).getZoom()-1.1 ).toString();	
+			  ).getZoom()).toString();
+
+			  map.setZoom(zoom_level);	
 		}
 
 		// Gets the extend of route and adjusts the zoom level
@@ -358,13 +385,12 @@
 			var minlng = Math.min.apply(null, lons),
 			  maxlng = Math.max.apply(null, lons);
 
-			// totem point 
-			var point = L.latLng(recommendation[0].totem_coords[1], recommendation[0].totem_coords[0]);
-
 			var zoom_level = (map.fitBounds([
-			    [minlat, minlng],
+			    [minlat, minlng+0.0005],
 			    [maxlat, maxlng]]
-			  ).getZoom()-1.1 ).toString();	
+			  ).getZoom()).toString();
+
+			map.setZoom(zoom_level);
 
 		}
 
