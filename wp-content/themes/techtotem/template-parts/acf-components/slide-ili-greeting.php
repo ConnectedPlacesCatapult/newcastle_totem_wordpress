@@ -19,7 +19,7 @@
 
 		<div class="cat-time">
 			<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-' .  $tt_category . '.svg'; ?>" width="210" height="210" class="icon">
-			<p>XX min walk</p>
+			<p>7 min walk</p>
 		</div>
 
 	</div>
