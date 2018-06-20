@@ -814,16 +814,19 @@
 			margin-left: rem-calc(36);
 			margin-right: rem-calc(36);
 			color: get-color(navy);
+		}
+	}
+
+		.data-sponsors {
+
+			img {
+				margin-left: $global-margin;
+			}
 
 			p {
 				text-align: right;
 			}
-
-				img {
-					margin-left: $global-margin;
-				}
 		}
-	}
 
 	.urban-obs-locale {
 
@@ -840,7 +843,7 @@
 	}
 
 		.sensor-graph {
-			margin-top: rem-calc(30);
+			margin-top: rem-calc(60);
 		}
 
 

@@ -70,7 +70,6 @@ if( $tt_get_data_sensor !== NULL ) :
 				</div>
 
 				<div class="sensor-graph cell large-12">
-					<h2>Title</h2>
 					<p><img src="http://uoweb3.ncl.ac.uk/tools/svg/variables/<?php echo $tt_get_data_sensor; ?>.svg"></p>
 				</div>
 
@@ -83,7 +82,7 @@ if( $tt_get_data_sensor !== NULL ) :
 
 				</div>
 
-				<div class="cell small-6">
+				<div class="data-sponsors cell small-6">
 					
 					<p>
 						<img src="<?php echo get_template_directory_uri() . '/img/logos/min/ukcric-logo.svg'; ?>" width="84" height="45" alt="UKCRIC">		
