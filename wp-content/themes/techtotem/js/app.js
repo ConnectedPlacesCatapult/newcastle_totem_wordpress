@@ -54,6 +54,15 @@ jQuery(function($) {
 			var heightWrapper = $( '.wrapper' ).outerHeight();
 			var heightContent = heightWrapper - heightNavbar;
 			$( '.page-screensaver .content, .page-screensaver .orbit-container' ).height( heightContent);
+
+			// make whole slide clickable
+			var slide_link = '';
+			$( '.page-screensaver .orbit-slide' ).each(function( slide_link ) {
+				slide_link = $(this).find( '.button' ).attr('href');
+				$(this).on( 'click touchstart', function(e) {
+					window.location = slide_link;
+				});
+			});
 		}
 
 
