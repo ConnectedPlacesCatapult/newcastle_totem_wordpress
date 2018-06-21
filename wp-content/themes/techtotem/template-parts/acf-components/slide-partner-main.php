@@ -23,7 +23,6 @@
 		}
 	</style>
 
-
 	<?php
 	// what type of content?
 	if( get_field( 'tt_partner_slide_content_type' , 'option' ) == 'simple' ) : 

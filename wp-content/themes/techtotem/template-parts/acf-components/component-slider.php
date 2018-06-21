@@ -35,13 +35,19 @@ if( have_rows( 'tt_slider_slides' ) ) :
 								<?php
 								// get colour palette
 								$tt_clr_palette = get_sub_field( 'tt_colour_scheme' );
+								if( $tt_clr_palette !== 'partner' ) : 
+									$tt_row_clr = get_sub_field( 'tt_colour_scheme' );
+								else :
+									$tt_row_clr = 'partner-clr';
+									echo '<style type="text/css">.partner-clr { background-color: ' . get_field( 'tt_partner_colour', 'option' ) . '; }</style>';
+								endif;
 
 								// get dynamic content selected for this row
 								$tt_content_component = get_sub_field( 'tt_dynamic_content' );
 								//echo $tt_content_component;
 								?>
 
-								<div class="row <?php echo $tt_clr_palette . ' ' . $tt_content_component; ?>">
+								<div class="row <?php echo $tt_row_clr . ' ' . $tt_content_component; ?>">
 									<div class="inner grid-container">
 
 										<?php include( locate_template( 'template-parts/acf-components/slide-' . $tt_content_component . '.php' ) ); ?>

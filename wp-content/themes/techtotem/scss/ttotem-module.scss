@@ -390,35 +390,11 @@
 	}
 
 
-	/* HERO */
+	/* GALLERY / HERO */
+	.gallery,
 	.hero {
-		position: relative;
-
-		img {
-			width: 100%;
-			height: auto;
-		}
-
-		figcaption {
-			position: absolute;
-			bottom: rem-calc(38);
-			left: rem-calc(60);
-			background-color: $white;
-			color: $medium-gray;
-			font-size: rem-calc(35);
-			max-width: rem-calc(375);
-			padding: rem-calc(13) rem-calc(25);
-		}
-
-	}
-
-
-	/* GALLERY */
-	.gallery {
 
 		figure {
-			position: relative;
-			overflow: hidden;
 		}
 
 			img {
@@ -428,12 +404,9 @@
 			}
 
 			figcaption {
-				position: absolute;
-				bottom: rem-calc(116);
-				left: rem-calc(138);
-				width: 660px;
 				background: $white;
 				padding: rem-calc(40);
+					color: $medium-gray;
 
 				h2 {
 					font-size: rem-calc(30);
@@ -448,6 +421,25 @@
 					}
 				}
 			}
+	}
+
+	.orbit.orbit-large {
+
+		.inner {
+			position: relative;
+		}
+
+		.orbit-slide {
+			overflow: auto;
+		}
+
+		.gallery,
+		.hero {
+
+			.more {
+				position: static;
+			}
+		}
 	}
 
 
@@ -865,6 +857,13 @@
 			.section-label {
 				top: rem-calc(60);
 			}
+
+			.hero {
+
+				h2 {
+					margin-bottom: 0;
+				}
+			}
 	}
 
 
@@ -892,7 +891,6 @@
 	.slider {
 
 		.partner-main {
-			display: block !important;
 
 			.inner {
 				padding: 0;

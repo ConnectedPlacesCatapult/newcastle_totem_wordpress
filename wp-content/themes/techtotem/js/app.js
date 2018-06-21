@@ -46,7 +46,7 @@ jQuery(function($) {
 		}
 
 
-		/* SCREENSAVER */
+		/* SLIDER: LARGE */
 		function tt_slider_large() {
 
 			// set height
@@ -55,7 +55,7 @@ jQuery(function($) {
 			var heightContent = heightWrapper - heightNavbar;
 			$( '.page-screensaver .content, .page-screensaver .orbit-container' ).height( heightContent);
 
-			// make whole slide clickable
+			// screensaver - make whole slide clickable
 			var slide_link = '';
 			$( '.page-screensaver .orbit-slide' ).each(function( slide_link ) {
 				slide_link = $(this).find( '.button' ).attr('href');

@@ -84,24 +84,24 @@
 		"oF": 3,
 		"oS": 3
 		},
-	"\/css\/MarkerCluster.css": {
+	"\/css\/markercluster.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/css\/min\/MarkerCluster.css",
-		"oF": 3,
+		"oAP": "\/css\/min\/markercluster.css",
+		"oF": 2,
 		"oS": 3
 		},
-	"\/css\/MarkerCluster.Default.css": {
+	"\/css\/markercluster.default.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/css\/min\/MarkerCluster.Default.css",
-		"oF": 3,
+		"oAP": "\/css\/min\/markercluster.default.css",
+		"oF": 2,
 		"oS": 3
 		},
 	"\/css\/min\/leaflet-gesture-handling.css": {
@@ -114,23 +114,23 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"\/css\/min\/MarkerCluster.css": {
+	"\/css\/min\/markercluster.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/css\/min\/MarkerCluster-min.css",
+		"oAP": "\/css\/min\/markercluster-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/css\/min\/MarkerCluster.Default.css": {
+	"\/css\/min\/markercluster.default.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/css\/min\/MarkerCluster.Default-min.css",
+		"oAP": "\/css\/min\/markercluster.default-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -1064,13 +1064,13 @@
 		},
 	"\/js\/app.js": {
 		"ft": 64,
-		"ma": 1,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/min\/app.min.js",
 		"oF": 2,
 		"sC": 1,
-		"tS": 1
+		"tS": 0
 		},
 	"\/js\/leaflet-gesture-handling.js": {
 		"ft": 64,
@@ -1088,7 +1088,7 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/min\/leaflet.markercluster-src.js",
-		"oF": 3,
+		"oF": 2,
 		"sC": 1,
 		"tS": 0
 		},
@@ -1129,22 +1129,22 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/min\/SnakeAnim.js": {
+	"\/js\/min\/snakeanim.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/min\/SnakeAnim.js",
+		"oAP": "\/js\/min\/snakeanim.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/SnakeAnim.js": {
+	"\/js\/snakeanim.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/min\/SnakeAnim.js",
+		"oAP": "\/js\/min\/snakeanim.js",
 		"oF": 3,
 		"sC": 1,
 		"tS": 0
