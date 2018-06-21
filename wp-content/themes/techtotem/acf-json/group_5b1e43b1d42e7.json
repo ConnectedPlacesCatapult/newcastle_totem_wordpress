@@ -57,8 +57,8 @@
             "key": "field_5b1edf02b86b4",
             "label": "Page\/Slide",
             "name": "tt_partner_slide_code",
-            "type": "textarea",
-            "instructions": "Page\/Slide text. Used for complex content which requires some special code to work (e.g. an API, JavaScript).",
+            "type": "number",
+            "instructions": "Enter ID number of PHP Snippet",
             "required": 0,
             "conditional_logic": [
                 [
@@ -76,9 +76,11 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -98,5 +100,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1528750030
+    "modified": 1529498302
 }

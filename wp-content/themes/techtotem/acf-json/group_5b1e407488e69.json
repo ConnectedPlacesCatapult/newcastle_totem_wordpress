@@ -57,8 +57,8 @@
             "key": "field_5b1e44b004922",
             "label": "Banner\/Teaser",
             "name": "tt_partner_teaser_code",
-            "type": "textarea",
-            "instructions": "Hero banner \/teaser text used for promoting some content and (optionally) linking through to the partner page on this totem. Used for complex content which requires some special code to work (e.g. an API, JavaScript).",
+            "type": "number",
+            "instructions": "Enter ID number of PHP Snippet",
             "required": 0,
             "conditional_logic": [
                 [
@@ -76,9 +76,11 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -98,5 +100,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1528749848
+    "modified": 1529498796
 }
