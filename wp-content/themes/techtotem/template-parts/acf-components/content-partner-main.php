@@ -34,7 +34,8 @@
 	elseif( get_field( 'tt_partner_teaser_content_type' , 'option' ) == 'complex' ) : 
 
 		// complex content
-		the_field( 'tt_partner_slide_code', 'option' );
+		$tt_php_snippet = get_field( 'tt_partner_slide_code', 'option' );
+		echo do_shortcode( '[wbcr_php_snippet id="' . $tt_php_snippet . '"]' );
 
 	else : 
 
