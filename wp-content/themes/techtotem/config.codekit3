@@ -74,6 +74,66 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/css\/leaflet-gesture-handling.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/min\/leaflet-gesture-handling.css",
+		"oF": 3,
+		"oS": 3
+		},
+	"\/css\/MarkerCluster.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/min\/MarkerCluster.css",
+		"oF": 3,
+		"oS": 3
+		},
+	"\/css\/MarkerCluster.Default.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/min\/MarkerCluster.Default.css",
+		"oF": 3,
+		"oS": 3
+		},
+	"\/css\/min\/leaflet-gesture-handling.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/min\/leaflet-gesture-handling-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/min\/MarkerCluster.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/min\/MarkerCluster-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/min\/MarkerCluster.Default.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/min\/MarkerCluster.Default-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/footer.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -190,6 +250,16 @@
 		"miP": 0,
 		"oA": 0,
 		"oAP": "\/img\/icons\/min\/data.svg",
+		"oF": 3,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/group.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "\/img\/icons\/min\/group.svg",
 		"oF": 3,
 		"opt": 1,
 		"plM": 3758088159,
@@ -400,6 +470,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/img\/icons\/min\/data.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/min\/group.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/min\/group.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -928,20 +1008,20 @@
 	"\/img\/logos\/newcastleuni-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 0,
-		"oAP": "\/img\/logos\/min\/newcastleuni-logo.svg",
-		"oF": 3,
-		"opt": 1,
+		"oA": 2,
+		"oAP": "\/img\/logos\/newcastleuni-logo.svg",
+		"oF": 0,
+		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
 	"\/img\/logos\/ukcric-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 0,
-		"oAP": "\/img\/logos\/min\/ukcric-logo.svg",
-		"oF": 3,
-		"opt": 1,
+		"oA": 2,
+		"oAP": "\/img\/logos\/ukcric-logo.svg",
+		"oF": 0,
+		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
@@ -992,6 +1072,26 @@
 		"sC": 1,
 		"tS": 1
 		},
+	"\/js\/leaflet-gesture-handling.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/leaflet-gesture-handling.js",
+		"oF": 2,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/leaflet.markercluster-src.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/leaflet.markercluster-src.js",
+		"oF": 3,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/js\/min\/app.min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -1008,6 +1108,26 @@
 		"oA": 0,
 		"oAP": "\/js\/min\/app.min.js.map",
 		"oF": 0
+		},
+	"\/js\/min\/leaflet-gesture-handling.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/leaflet-gesture-handling.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/min\/leaflet.markercluster-src.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/leaflet.markercluster-src.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/js\/min\/SnakeAnim.js": {
 		"ft": 64,
