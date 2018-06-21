@@ -86,15 +86,14 @@
 
 <!-- MAP -->
 <div class="map">
-
 	<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
-	<script src='<?php echo get_template_directory_uri() . "/js/min/SnakeAnim.js"; ?>'></script>
+	<script src='<?php echo get_template_directory_uri() . "/js/min/snakeanim.js"; ?>'></script>
 	<script src='<?php echo get_template_directory_uri() . "/js/min/leaflet.markercluster-src.js"; ?>'></script>
 	<script src='<?php echo get_template_directory_uri() . "/js/min/leaflet-gesture-handling.js"; ?>'></script>
 
-	<link href='<?php echo get_template_directory_uri() . "/css/min/leaflet-gesture-handling"; ?>' rel='text/css' />
-	<link href='<?php echo get_template_directory_uri() . "/css/min/MarkerCluster.css"; ?>' rel='stylesheet' />
-	<link href='<?php echo get_template_directory_uri() . "/css/min/MarkerCluster.Default.css"; ?>' rel='stylesheet' />
+	<link href='<?php echo get_template_directory_uri() . "/css/min/leaflet-gesture-handling.css"; ?>' rel='text/css' />
+	<link href='<?php echo get_template_directory_uri() . "/css/min/markercluster.css"; ?>' rel='stylesheet' />
+	<link href='<?php echo get_template_directory_uri() . "/css/min/markercluster.default.css"; ?>' rel='stylesheet' />
 	<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
 
 	<!-- JOURNEY TIME -->
@@ -123,21 +122,24 @@
 		var recommendation = <?php echo json_encode( $tt_data_recommendations ); ?>;
 
 		L.mapbox.accessToken = 'pk.eyJ1IjoidGhhcnRuZWxsIiwiYSI6Im9RUHozYjQifQ.Rk3QrG_ymHOt9Jndsq_8Yg';
-		var map = L.mapbox.map('map', 'https://api.mapbox.com/v3/mapbox.dark.json', {gestureHandling: true}).setView([54.976,-1.605], 13);
-		// var map = L.mapbox.map("map", {
-		//     center: [54.976,-1.605],
-		//     zoom: 13,
-		//     gestureHandling: true
-		// });
+
+		var tilejson = {
+		  "tiles": [ "https://api.tiles.mapbox.com/v4/examples.map-i86l3621/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidGhhcnRuZWxsIiwiYSI6Im9RUHozYjQifQ.Rk3QrG_ymHOt9Jndsq_8Yg" ],
+		  "minzoom": 0,
+		  "maxzoom": 18
+		}
+
+		var map = L.mapbox.map('map').setView([recommendation[0].coordinates[1],recommendation[0].coordinates[0]], 15);
+
 		L.mapbox.styleLayer('mapbox://styles/thartnell/cjikda40704fg2rnp6cm5vsl4').addTo(map);
 
 		document.getElementsByClassName( 'leaflet-control-attribution' )[0].style.display = 'none';
 
 		var markers = L.markerClusterGroup({
-			maxClusterRadius: 20,
+			maxClusterRadius: 50,
 			iconCreateFunction: function (cluster) {
 				var markers = cluster.getAllChildMarkers();
-				return L.icon({ iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/group.svg'; ?>",
+				return L.icon({ iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/group.svg'; ?>",
 					iconSize: [50, 50]});
 			},
 		//Disable all of the defaults:
@@ -222,6 +224,31 @@
 				markerList.push(icon);
 			}
 
+			else if (element.category == 'toilet'){
+
+			    var destination_icon = L.icon({
+			        iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/map-toilets.svg'; ?>",
+			        iconSize: [25, 25], 
+			        iconAnchor:   [15, 15]
+			        });
+
+				var marker = L.marker([element.coordinates[1], element.coordinates[0]],
+					{icon: destination_icon});			
+				markerList.push(marker);
+			}
+
+			else if (element.category == 'water'){
+
+			    var destination_icon = L.icon({
+			        iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/map-water.svg'; ?>",
+			        iconSize: [25, 25], 
+			        iconAnchor:   [15, 15]
+			        });
+
+				var marker = L.marker([element.coordinates[1], element.coordinates[0]],
+					{icon: destination_icon});			
+				markerList.push(marker);
+			}
 		});
 
 		// Destination
@@ -309,7 +336,7 @@
 		markers.addLayers(markerList);
 		map.addLayer(markers);
 
-		zoomToAmenities();
+		// zoomToAmenities();
 
 		// Button handlers
 		var button_class = document.getElementsByClassName("button");
@@ -327,6 +354,7 @@
 				}); 
 				var polyline = L.polyline(polylinePoints, { className: 'my_polyline', snakingSpeed: 200 }).addTo(map).snakeIn();
            		zoomToPolyline(polylinePoints);
+				fadeOutEffect();			
 		    }
 		    else if (route_id == 'route_leisure'){
 		    	clearMap();
@@ -335,6 +363,7 @@
 				}); 
 				var polyline = L.polyline(polylinePoints, { className: 'my_polyline', snakingSpeed: 300 }).addTo(map).snakeIn();
            		zoomToPolyline(polylinePoints);
+           		fadeOutEffect();
 		    }
 		    else if (route_id == 'route_curious'){
 		    	clearMap();
@@ -343,6 +372,7 @@
 				}); 
 				var polyline = L.polyline(polylinePoints, { className: 'my_polyline', snakingSpeed: 300 }).addTo(map).snakeIn();
            		zoomToPolyline(polylinePoints);
+           		fadeOutEffect();
 		    }
 		};
 
@@ -350,12 +380,25 @@
 		    button_class[i].addEventListener('click', ButtonHandler, false);
 		}
 
+		function fadeOutEffect() {
+		    var fadeTarget = document.getElementsByClassName("events callout gray");
+		    var fadeEffect = setInterval(function () {
+		        if (!fadeTarget[0].style.opacity) {
+		            fadeTarget[0].style.opacity = 1;
+		        }
+		        if (fadeTarget[0].style.opacity > 0.2) {
+		            fadeTarget[0].style.opacity -= 0.05;
+		        } else {
+		            clearInterval(fadeEffect);
+		        }
+		    }, 200);
+		}
 
 		function zoomToAmenities(){
 			var lats = []; var lons = []; 
 			recommendation[0].properties[0].amenities.forEach(function(element) {
-			lats.push(element.coordinates[1]);
-			lons.push(element.coordinates[0]);	
+				lats.push(element.coordinates[1]);
+				lons.push(element.coordinates[0]);	
 			});
 			// calc the min and max lng and lat
 			var minlat = Math.min.apply(null, lats),
@@ -366,9 +409,11 @@
 			var zoom_level = (map.fitBounds([
 			    [minlat, minlng],
 			    [maxlat, maxlng]]
-			  ).getZoom()).toString();
+			  ).getZoom());
 
-			  map.setZoom(zoom_level);	
+
+			console.log(zoom_level);
+			map.setZoom(zoom_level);	
 		}
 
 		// Gets the extend of route and adjusts the zoom level
@@ -385,12 +430,17 @@
 			var minlng = Math.min.apply(null, lons),
 			  maxlng = Math.max.apply(null, lons);
 
-			var zoom_level = (map.fitBounds([
+			map.fitBounds([
 			    [minlat, minlng+0.0005],
 			    [maxlat, maxlng]]
-			  ).getZoom()).toString();
+			  );
 
-			map.setZoom(zoom_level);
+			// var zoom_level = (map.fitBounds([
+			//     [minlat, minlng+0.0005],
+			//     [maxlat, maxlng]]
+			//   ).getZoom()).toString();
+
+			// map.setZoom(zoom_level-0.5);
 
 		}
 
@@ -409,7 +459,7 @@
 		    }
 		}
 
-		
+
 		</script>
 
 
