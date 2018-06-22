@@ -79,10 +79,10 @@
 
 
 	/* META */
-	.meta {
+	/* .meta {
 		text-transform: uppercase;
 		font-size: rem-calc(15) !important;
-	}
+	} */
 
 
 	/* BUTTON */
@@ -208,7 +208,6 @@
 	/* LISTING */
 	.listing {
 		list-style-type: none;
-		counter-reset: tt-counter;
 
 		* {
 			font-size: rem-calc(12);
@@ -219,12 +218,10 @@
 			padding-left: rem-calc(18);
 			position: relative;
 
-			&:before {
-				content: counter(tt-counter);
-				counter-increment: tt-counter;
+			.counter {
 				background: get-color(turquoise);
 				font-size: rem-calc(10);
-				color: $black;
+				color: $white;
 				border-radius: 50%;
 				position: absolute;
 				left: rem-calc(-18);
@@ -349,9 +346,8 @@
 
 				li {
 
-					&:before {
+					.counter {
 						background: get-color(pink);
-						color: $white;
 					}
 				}
 			}

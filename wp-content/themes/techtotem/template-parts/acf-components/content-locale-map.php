@@ -160,7 +160,7 @@
 
 				icon.bindPopup(element.name);
 				
-				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
+				jQuery('#' + element.category).append('<li><span class="counter">' + element.counter + '</span>' + element.name + '</li>');
 				markerList.push(icon);
 			}
 
@@ -175,7 +175,7 @@
 
 				icon.bindPopup(element.name);
 				
-				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
+				jQuery('#' + element.category).append('<li><span class="counter">' + element.counter + '</span>' + element.name + '</li>');
 				markerList.push(icon);
 			}
 
@@ -190,7 +190,7 @@
 
 				icon.bindPopup(element.name);
 
-				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
+				jQuery('#' + element.category).append('<li><span class="counter">' + element.counter + '</span>' + element.name + '</li>');
 				markerList.push(icon);
 			}
 
@@ -205,7 +205,7 @@
 
 				icon.bindPopup(element.name);
 
-				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
+				jQuery('#' + element.category).append('<li><span class="counter">' + element.counter + '</span>' + element.name + '</li>');
 				markerList.push(icon);
 			}
 
@@ -220,7 +220,7 @@
 
 				icon.bindPopup(element.name);
 
-				jQuery('#' + element.category).append('<li>' + element.name + '</li>');
+				jQuery('#' + element.category).append('<li><span class="counter">' + element.counter + '</span>' + element.name + '</li>');
 				markerList.push(icon);
 			}
 
