@@ -59,7 +59,7 @@ jQuery(function($) {
 			var slide_link = '';
 			$( '.page-screensaver .orbit-slide' ).each(function( slide_link ) {
 				slide_link = $(this).find( '.button' ).attr('href');
-				$(this).on( 'click touchstart', function(e) {
+				$(this).on( 'click touch', function(e) {
 					window.location = slide_link;
 				});
 			});
@@ -79,6 +79,35 @@ jQuery(function($) {
 		}
 
 
+		/* SCREENSAVER */
+		/*Refresh the screensaver content every 15mins */
+		function tt_screensaver_refresh() {
+
+			$.ajaxSetup({
+	            cache: false,
+	            /*beforeSend: function() {
+	                $('#content').hide();
+	                $('#loading').show();
+	            },*/
+	            /*complete: function() {
+	                $('#loading').hide();
+	                $('#content').show();
+	            },*/
+	            /*success: function() {
+	                $('#loading').hide();
+	                $('#content').show();
+	            }*/
+	        });
+	        var $container = $( '.page-screensaver #ajax-refresh' );
+	        var screensaver_url = window.location.href;
+	        var refreshId = setInterval(function() {
+	        	$container.load( screensaver_url );
+	        }, 900000 );
+
+	    }
+
+
+
 
 	/* 
 	 * *******************************************************************************
@@ -96,6 +125,7 @@ jQuery(function($) {
 			tt_content_bottom_spacing();
 			tt_slider_large();
 			tt_map();
+			tt_screensaver_refresh();
 
 	    });
 

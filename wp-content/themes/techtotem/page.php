@@ -34,7 +34,7 @@ get_header();
 				<?php the_title( $before = '<h1>', $after = '</h1>', $echo = true ); ?>
 			</header>
 
-			<div class="content">
+			<div class="content" id="ajax-refresh">
 
 				<!-- TIME & TEMP -->
 				<section class="time-temp">

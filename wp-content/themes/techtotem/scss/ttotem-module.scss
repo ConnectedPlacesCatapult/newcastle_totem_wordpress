@@ -775,10 +775,14 @@
 					}
 
 					.meta {
+						font-size: rem-calc(16);
 
 						&:last-child {
 							position: fixed;
 							bottom: 180px;
+							left: 0;
+							right: 0;
+							padding: 0 rem-calc(113) 0 rem-calc(166);
 						}
 					}
 
