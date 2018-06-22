@@ -115,3 +115,30 @@
 									margin-left: rem-calc(10);
 								}
 				}
+
+
+/* 
+ * *******************************************************************************
+ * SCREENSAVER
+ * *******************************************************************************
+ */
+.page-screensaver {
+
+	.ili-greeting.navy {
+
+		.greeting-icons {
+
+			img {
+				filter: invert(100%);
+			}
+		}
+	}
+
+	.urban-obs-random {
+
+		h3 {
+			color: $white;
+		}
+	}
+
+}
