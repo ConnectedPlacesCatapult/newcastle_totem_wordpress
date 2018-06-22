@@ -39,13 +39,13 @@
 					//echo '<pre>'; print_r($tt_amenities); echo '</pre>';
 
 					// loop through results to get only "events"
-					foreach ($tt_amenities as $key => $value) :
+					foreach ( $tt_amenities as $key => $value ) :
 
 						// iterate through amenities and add all events to $tt_events
 						if( $tt_amenities[$key]['category'] == 'event' ) : 
 
 							// push each event into the events array
-							array_push($tt_events, $tt_amenities[$key] );
+							array_push( $tt_events, $tt_amenities[$key] );
 							?>
 
 						<?php
