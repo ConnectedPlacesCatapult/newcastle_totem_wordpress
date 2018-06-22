@@ -10,18 +10,8 @@
  * @version 1.0
  */
 
-
-// get colour palette
-$tt_clr_palette = get_sub_field( 'tt_colour_scheme' );
-
-// get colour palette
-$tt_clr_palette = get_sub_field( 'tt_colour_scheme' );
-if( $tt_clr_palette !== 'partner' ) : 
-	$tt_row_clr = get_sub_field( 'tt_colour_scheme' );
-else :
-	$tt_row_clr = 'partner-clr';
-	echo '<style type="text/css">.partner-clr { background-color: ' . get_field( 'tt_partner_colour', 'option' ) . '; }</style>';
-endif;
+/* COLOUR PALETTE */
+include( locate_template( 'template-parts/lib/lib-color-palette.php' ) );
 
 // get dynamic content selected for this row
 $tt_content_component = get_sub_field( 'tt_dynamic_content' );
