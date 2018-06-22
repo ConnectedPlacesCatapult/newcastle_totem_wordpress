@@ -78,7 +78,7 @@
 										$tt_event_title = $tt_event[$key]['name'];
 										$tt_event_address = $tt_event[$key]['address'];
 										$tt_event_tag = $tt_event[$key]['properties'][0]['subcategory'];
-										$tt_event_date = date( "d M Y, h:ia", $tt_event[$key]['properties'][0]['start'] );
+										$tt_event_date = date( "d M Y, h:ia", strtotime( $tt_event[$key]['properties'][0]['start'] ) );
 										?>
 							
 										<li>
