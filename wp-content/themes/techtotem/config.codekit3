@@ -1285,6 +1285,13 @@
 		"oAP": "\/template-parts\/acf-components\/content-ili-greeting.php",
 		"oF": 0
 		},
+	"\/template-parts\/acf-components\/content-locale-events.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/acf-components\/content-locale-events.php",
+		"oF": 0
+		},
 	"\/template-parts\/acf-components\/content-locale-map.php": {
 		"cB": 0,
 		"ft": 8192,
