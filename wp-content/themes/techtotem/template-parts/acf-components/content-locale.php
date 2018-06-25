@@ -61,6 +61,10 @@
 
 		</div>
 
+		<div class="cell small-12">
+			<p class="tiny">Data source: DarkSky, EventBrite, GooglePlaces, Meetup, Foursquare and OpenStreetMap.</p>
+		</div>
+
 	</div><!-- .key -->
 	
 	<?php

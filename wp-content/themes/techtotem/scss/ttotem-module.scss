@@ -63,6 +63,12 @@
 	}
 
 
+	/* TINY */
+	.tiny {
+		font-size: rem-calc(10);
+	}
+
+
 	/* BADGE */
 	.badge {
 		display: inline-block;
@@ -351,6 +357,11 @@
 					}
 				}
 			}
+
+			.tiny {
+				margin: 0;
+				color: $medium-gray;
+			}
 		}
 
 
@@ -511,12 +522,12 @@
 				color: inherit;
 			}
 
-		&:last-child {
+		/* &:last-child {
 
 			.inner {
 				padding-bottom: 0;
 			}
-		}
+		} */
 	}
 
 
