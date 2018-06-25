@@ -1162,6 +1162,17 @@
 		"oAP": "\/page.php",
 		"oF": 0
 		},
+	"\/screenshot.png": {
+		"ft": 32768,
+		"iS": 164094,
+		"oA": 0,
+		"oAP": "\/screenshot.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/scss\/_settings.scss": {
 		"aP": 1,
 		"bl": 0,
