@@ -556,6 +556,13 @@
 
 		.orbit {
 
+			.orbit-container {
+
+				&:focus {
+					outline: 0;
+				}
+			}
+
 			.orbit-controls {
 
 				button {
