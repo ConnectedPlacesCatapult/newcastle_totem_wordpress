@@ -33,8 +33,8 @@ if( isset( $_GET["sensor"] ) ) {
 		
 	elseif( $tt_get_data_sensor === 'wind' ) :
 		
-		$tt_get_data_sensor = 'wind-speed';
-		//
+		$tt_get_data_sensor = 'wind-direction';
+
 	endif;
 }
 else {
