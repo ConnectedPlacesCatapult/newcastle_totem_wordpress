@@ -22,7 +22,7 @@
 
 			<div class="card-section">
 
-				<h3><?php echo $tt_sensor_random_label; ?></h3>
+				<h3><?php echo $tt_sensor_random_label . ': ' . $tt_sensor_random_reading . $tt_sensor_random_unit; ?></p>
 				<p><?php echo $tt_sensor_random_tagline; ?></p>
 
 			</div>
