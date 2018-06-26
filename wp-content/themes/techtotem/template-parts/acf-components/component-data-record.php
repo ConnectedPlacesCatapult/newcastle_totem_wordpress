@@ -50,7 +50,7 @@ if( $tt_get_data_sensor !== NULL ) :
 
 			<div class="grid-x grid-margin-x">
 
-				<div class="cell large-5">
+				<div class="cell small-5">
 
 					<div class="locale-data label-data-<?php echo $tt_sensor_single_source; ?>">
 
@@ -64,7 +64,7 @@ if( $tt_get_data_sensor !== NULL ) :
 
 				</div>
 
-				<div class="cell large-7">
+				<div class="cell small-7">
 					<h2><?php echo $tt_sensor_single_label; ?></h2>
 					<p><?php echo $tt_sensor_single_description; ?></p>
 				</div>
