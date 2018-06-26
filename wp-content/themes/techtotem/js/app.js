@@ -83,28 +83,28 @@ jQuery(function($) {
 		/*Refresh the screensaver content every 15mins */
 		function tt_screensaver_refresh() {
 
-			$.ajaxSetup({
-	            cache: false,
-	            /*beforeSend: function() {
-	                $('#content').hide();
-	                $('#loading').show();
-	            },*/
-	            /*complete: function() {
-	                $('#loading').hide();
-	                $('#content').show();
-	            },*/
-	            /*success: function() {
-	                $('#loading').hide();
-	                $('#content').show();
-	            }*/
-	        });
-	        var $container = $( '.page-screensaver #ajax-refresh' );
-	        var screensaver_url = window.location.href;
-	        var refreshId = setInterval(function() {
-	        	$container.load( screensaver_url );
-	        }, 900000 );
+			if( $( 'body' ).hasClass( 'page-screensaver' ) ) {
 
-	    }
+				// get the current time
+				var time = new Date().getTime();
+
+				// reset var "time" every time a user interacts with the screensaver
+				$(document.body).bind( 'swipe click', function () {
+					time = new Date().getTime();
+				});
+
+				// recheck var "time" every 15 mins
+				// if the current time is 15 mins later than the last time var "time" was updated then reload the page
+				setInterval(function() {
+
+					if (new Date().getTime() - time > 900000) { // time frame to compare var "time" against
+						window.location.href = window.location.href;
+					}
+
+				}, 900000); // frequency to compare time
+
+			}
+		}
 
 
 
