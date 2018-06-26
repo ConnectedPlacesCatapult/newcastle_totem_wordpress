@@ -41,7 +41,7 @@
 					<!-- ORBIT SLIDE -->
 					<li class="orbit-slide">
 
-						<ul class="gallery-grid">
+						<ul class="gallery-grid" data-equalizer>
 							<?php
 							// Loop through each of the items in the array for the current slide
 							foreach ($tt_data_sensors_gallery_slide as $key => $value) :
@@ -60,7 +60,7 @@
 								$tt_sensor_slide_unit = $tt_data_sensors_gallery_slide[$key]["units"];
 								?>
 
-								<li class="locale-data label-data-<?php echo $tt_sensor_slide_source; ?>">
+								<li class="locale-data label-data-<?php echo $tt_sensor_slide_source; ?>" data-equalizer-watch>
 
 									<a href="<?php echo home_url( '/urban-observatory-data-record/' ); ?>?sensor=<?php echo $tt_sensor_slide_key; ?>">
 
