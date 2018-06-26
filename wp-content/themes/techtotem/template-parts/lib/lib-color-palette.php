@@ -10,6 +10,9 @@
 
 /* COLOUR PALETTE */
 
+	// reset var
+	$tt_clr_palette = '';
+
 	/* Get colour palette */
 	$tt_clr_palette = get_sub_field( 'tt_colour_scheme' );
 
