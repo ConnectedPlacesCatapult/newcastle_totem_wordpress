@@ -15,7 +15,7 @@
 	$tt_totem_id = get_current_blog_id();
 
 	// path to json file
-	$tt_json_path = 'https://s3-eu-west-1.amazonaws.com/southside.tech.totem';
+	$tt_json_path = 'https://s3-eu-west-2.amazonaws.com/newcastle.tech.totem';
 
 	// path to JSON file
 	$tt_data_sensors_url = $tt_json_path . '/sensors-totem-' . $tt_totem_id . '.json';
