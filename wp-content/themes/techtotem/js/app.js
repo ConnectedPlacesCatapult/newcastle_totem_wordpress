@@ -54,15 +54,20 @@ jQuery(function($) {
 			var heightWrapper = $( '.wrapper' ).outerHeight();
 			var heightContent = heightWrapper - heightNavbar;
 			$( '.page-screensaver .content, .page-screensaver .orbit-container' ).height( heightContent);
+		}
 
-			// screensaver - make whole slide clickable
-			var slide_link = '';
-			$( '.page-screensaver .orbit-slide' ).each(function( slide_link ) {
-				slide_link = $(this).find( '.button' ).attr('href');
+
+		/* COMPONENT: CLICKABLE */
+		function tt_component_click() {
+
+			var row_link = '';
+			$( '.page-screensaver .orbit-slide, .home .row' ).each(function( row_link ) {
+				row_link = $(this).find( 'a' ).attr('href');
 				$(this).on( 'click touch', function(e) {
-					window.location = slide_link;
+					window.location = row_link;
 				});
 			});
+
 		}
 
 
@@ -124,6 +129,7 @@ jQuery(function($) {
 			tt_get_date();
 			tt_content_bottom_spacing();
 			tt_slider_large();
+			tt_component_click();
 			tt_map();
 			tt_screensaver_refresh();
 
