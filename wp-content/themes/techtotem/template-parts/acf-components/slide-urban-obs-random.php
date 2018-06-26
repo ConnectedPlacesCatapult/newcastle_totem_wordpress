@@ -31,7 +31,7 @@
 
 			<p class="more"><a href="<?php echo home_url( '/urban-observatory/' ); ?>" class="button">More</a></p>
 
-			<p class="meta">* <?php echo $tt_sensor_random_source; ?></p>
+			<p class="meta">* Source: <?php echo $tt_sensor_random_source; ?></p>
 
 		</div>
 
