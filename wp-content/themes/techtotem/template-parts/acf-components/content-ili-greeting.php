@@ -9,7 +9,10 @@
  */
 ?>
 
+<a href="<?php echo home_url( '/ili/' ); ?>">
 
-<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-' .  $tt_category . '.svg'; ?>" width="110" height="110" class="icon">
+	<img src="<?php echo get_template_directory_uri() . '/img/icons/min/category-' .  $tt_category . '.svg'; ?>" width="110" height="110" class="icon">
 
-<p class="lead"><?php echo $recom_msg; ?></p>
+	<p class="lead"><?php echo $recom_msg; ?></p>
+
+</a>
