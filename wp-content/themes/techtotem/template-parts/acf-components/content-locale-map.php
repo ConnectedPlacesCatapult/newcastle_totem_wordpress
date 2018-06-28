@@ -161,7 +161,8 @@
 				icon.bindPopup(element.name);
 				
 				jQuery('#' + element.category).append('<li><span class="counter">' + element.counter + '</span>' + element.name + '</li>');
-				markerList.push(icon);
+				//markerList.push(icon);
+				icon.addTo(map);
 			}
 
 			else if (element.category == 'attractions'){
@@ -176,7 +177,8 @@
 				icon.bindPopup(element.name);
 				
 				jQuery('#' + element.category).append('<li><span class="counter">' + element.counter + '</span>' + element.name + '</li>');
-				markerList.push(icon);
+				//markerList.push(icon);
+				icon.addTo(map);
 			}
 
 			else if (element.category == 'culture'){
@@ -191,7 +193,8 @@
 				icon.bindPopup(element.name);
 
 				jQuery('#' + element.category).append('<li><span class="counter">' + element.counter + '</span>' + element.name + '</li>');
-				markerList.push(icon);
+				//markerList.push(icon);
+				icon.addTo(map);
 			}
 
 			else if (element.category == 'food_drinks'){
@@ -206,7 +209,8 @@
 				icon.bindPopup(element.name);
 
 				jQuery('#' + element.category).append('<li><span class="counter">' + element.counter + '</span>' + element.name + '</li>');
-				markerList.push(icon);
+				//markerList.push(icon);
+				icon.addTo(map);
 			}
 
 			else if (element.category == 'event'){
@@ -221,7 +225,9 @@
 				icon.bindPopup(element.name);
 
 				jQuery('#' + element.category).append('<li><span class="counter">' + element.counter + '</span>' + element.name + '</li>');
-				markerList.push(icon);
+
+				icon.addTo(map);
+				//markerList.push(icon);
 			}
 
 			else if (element.category == 'toilet'){
@@ -233,8 +239,8 @@
 			        });
 
 				var marker = L.marker([element.coordinates[1], element.coordinates[0]],
-					{icon: destination_icon});			
-				markerList.push(marker);
+					{icon: destination_icon}).addTo(map);			
+				//markerList.push(marker);
 			}
 
 			else if (element.category == 'water'){
@@ -246,8 +252,8 @@
 			        });
 
 				var marker = L.marker([element.coordinates[1], element.coordinates[0]],
-					{icon: destination_icon});			
-				markerList.push(marker);
+					{icon: destination_icon}).addTo(map);			
+				//markerList.push(marker);
 			}
 		});
 
@@ -262,7 +268,7 @@
 
 			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
 				{icon: destination_icon}).addTo(map);
-			markerList.push(marker);
+			//markerList.push(marker);
 		} 
 
 		else if (recommendation[0].category == 'tranquility'){
@@ -274,7 +280,7 @@
 
 			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
 				{icon: destination_icon});			
-			markerList.push(marker);
+			//markerList.push(marker);
 		} 
 
 		else if (recommendation[0].category == 'culture'){
@@ -286,7 +292,7 @@
 
 			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
 				{icon: destination_icon}).addTo(map);	
-			markerList.push(marker);
+			//markerList.push(marker);
 		} 
 
 		else if (recommendation[0].category == 'attractions'){
@@ -298,7 +304,7 @@
 
 			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
 				{icon: destination_icon}).addTo(map);		
-			markerList.push(marker);
+			//markerList.push(marker);
 		} 
 
 		else if (recommendation[0].category == 'event'){
@@ -310,7 +316,7 @@
 
 			var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
 				{icon: destination_icon}).addTo(map);
-			markerList.push(marker);
+			//markerList.push(marker);
 		} 
 
 		// Totem location
@@ -328,13 +334,13 @@
 			      className: 'circle-map-icon-destination',
 			      html: 'T'
 			  })
-			});
-		markerList.push(icon);
+			}).addTo(map);
+		//markerList.push(icon);
 
 
 		// Add Markers to clustergroup
-		markers.addLayers(markerList);
-		map.addLayer(markers);
+		//markers.addLayers(markerList);
+		//map.addLayer(markers);
 
 		// zoomToAmenities();
 
@@ -354,7 +360,7 @@
 				}); 
 				var polyline = L.polyline(polylinePoints, { className: 'my_polyline', snakingSpeed: 200 }).addTo(map).snakeIn();
            		zoomToPolyline(polylinePoints);
-				fadeOutEffect();			
+				//fadeOutEffect();			
 		    }
 		    else if (route_id == 'route_leisure'){
 		    	clearMap();
@@ -363,7 +369,7 @@
 				}); 
 				var polyline = L.polyline(polylinePoints, { className: 'my_polyline', snakingSpeed: 300 }).addTo(map).snakeIn();
            		zoomToPolyline(polylinePoints);
-           		fadeOutEffect();
+           		//fadeOutEffect();
 		    }
 		    else if (route_id == 'route_curious'){
 		    	clearMap();
@@ -372,7 +378,7 @@
 				}); 
 				var polyline = L.polyline(polylinePoints, { className: 'my_polyline', snakingSpeed: 300 }).addTo(map).snakeIn();
            		zoomToPolyline(polylinePoints);
-           		fadeOutEffect();
+           		//fadeOutEffect();
 		    }
 		};
 
