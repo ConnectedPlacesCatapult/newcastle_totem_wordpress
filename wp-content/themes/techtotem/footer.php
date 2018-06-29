@@ -40,7 +40,7 @@
 
 	    		<li>
 	    			<a href="<?php echo home_url( '/urban-observatory/' ); ?>">
-	    				<span>Show me more data</span>
+	    				<span>Local data</span>
 	    				<img src="<?php echo get_template_directory_uri() . '/img/logos/min/urbanobservatory-symbol.svg' ?>" width="50" height="50" class="icon">
 	    			</a>
 	    		</li>
