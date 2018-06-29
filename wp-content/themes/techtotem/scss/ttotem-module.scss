@@ -896,8 +896,19 @@
 				top: rem-calc(60);
 			}
 
-			.orbit-controls {
-				display: none;
+			.orbit.orbit-large {
+
+				.orbit-controls {
+
+					.orbit-previous {
+						left: rem-calc(30);
+					}
+
+					.orbit-next {
+						right: rem-calc(30);
+					}
+				}
+
 			}
 	}
 
