@@ -115,7 +115,7 @@
 	</nav><!-- .journey-time-->
 
 	<!-- Mapbox -->
-	<div id="map" style="width: 100%; height: 990px;"></div>
+	<div id="map" style="width: 100%; height: 100%;"></div>
 
 		<script>
 		// Get the json data

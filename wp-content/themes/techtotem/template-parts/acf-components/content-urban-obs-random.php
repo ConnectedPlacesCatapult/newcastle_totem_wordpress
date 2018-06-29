@@ -14,7 +14,7 @@
 
 <div class="card grid-x">
 
-	<div class="cell large-6 large-offset-6">
+	<div class="cell large-8 large-offset-4">
 
 		<a href="<?php echo home_url( '/urban-observatory/' ); ?>">
 
@@ -22,7 +22,7 @@
 
 			<div class="card-section">
 
-				<h3><?php echo $tt_sensor_random_label . ': ' . $tt_sensor_random_reading . $tt_sensor_random_unit; ?></p>
+				<h3><?php echo $tt_sensor_random_label . ': ' . $tt_sensor_random_reading . $tt_sensor_random_unit; ?></h3>
 				<p><?php echo $tt_sensor_random_tagline; ?></p>
 
 			</div>

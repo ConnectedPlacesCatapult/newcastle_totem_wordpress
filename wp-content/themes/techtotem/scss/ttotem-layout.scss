@@ -28,36 +28,30 @@
 		}
 
 
-			/* WRAPPER: INNER */
-			/* .wrapper-inner {
-			} */
+			/* CONTENT: MAIN */
+			.content-main {
+				position: relative;
+			}
 
 
-				/* CONTENT: MAIN */
-				.content-main {
-					position: relative;
+				/* TIME & TEMP */
+				.time-temp {
+					position: absolute;
+					top: ($global-margin * 2.5);
+					right: ($global-margin * 3.5);
+					z-index: 1;
 				}
 
 
-					/* TIME & TEMP */
-					.time-temp {
-						//background: pink;
-						position: absolute;
-						top: ($global-margin * 2.5);
-						right: ($global-margin * 3.5);
-						z-index: 1;
-					}
-
-
-				/* NAVBAR */
-				.navbar {
-					background: $white;
-					position: fixed;
-					bottom: 0;
-					left: 0;
-					width: 100%;
-					z-index: 1001;
-				}
+			/* NAVBAR */
+			.navbar {
+				background: $white;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				z-index: 1001;
+			}
 
 
 /* 
@@ -67,12 +61,38 @@
  */
 .page-screensaver {
 
+	// set the height of each element to 100% of its parent so that we can have 
+	// full height background colours and position the contents of each slide
+	// in the middle of the screen
 	.content-main, 
 	article,
-	.orbit-slide {
+	.content, 
+	.slider,
+	.slider .inner, 
+	.orbit-large,
+	.orbit-wrapper,
+	.orbit-container,
+	.row {
 		height: 100%;
 	}
 
+}
+
+
+/* 
+ * *******************************************************************************
+ * HOME
+ * *******************************************************************************
+ */
+.page-home {
+
+	.row {
+		height: 593px;
+	}
+
+		.hero {
+			height: 593px;
+		}
 }
 
 
@@ -86,4 +106,38 @@
 	.time-temp {
 		display: none;
 	}
+
+	// set the height of each element to 100% of its parent so that we can have 
+	// full height background colours and position the contents of each slide
+	// in the middle of the screen
+	.content-main, 
+	article,
+	.content,
+	.row,
+	.row .inner,
+	.gallery,
+	.orbit-large,
+	.orbit-wrapper {
+		height: 100%;
+	}
+
+		.orbit-container {
+			height: 100% !important;
+		}
+
+			.orbit-slide {
+				height: 100% !important;
+			}
+
+				figure {
+					height: 100%;
+					display: flex;
+					align-items: center;
+				}
+
+					figcaption {
+						bottom: 0;
+						left: 0;
+						width: 100%;
+					}
 }

@@ -287,13 +287,14 @@
 		.map {
 			background: $black;
 			position: relative;
+			height: 900px;
 		}
 
 			.journey-time {
 				display: inline-block;
 				position: absolute;
 				left: rem-calc(25);
-				bottom: rem-calc(25);
+				bottom: rem-calc(20);
 				z-index: 1;
 
 				button {
@@ -387,12 +388,12 @@
 		}
 
 			h3 {
-				font-size: rem-calc(60);
+				font-size: rem-calc(40);
 				color: get-color(navy);
 			}
 
 			p {
-				font-size: rem-calc(35);
+				font-size: rem-calc(26);
 			}
 	}
 
@@ -402,18 +403,30 @@
 	.hero {
 
 		figure {
+			position: relative;
 		}
 
-			img {
-				width: 100%;
-				height: auto;
-				max-width: none;
+			.img-wrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				overflow: hidden;
 			}
+
+				img {
+					width: 100%;
+					height: auto;
+					max-width: none;
+				}
 
 			figcaption {
 				background: $white;
-				padding: rem-calc(40);
-					color: $medium-gray;
+				padding: rem-calc(30);
+				color: $medium-gray;
+				position: absolute;
+				left: rem-calc(60);
+				bottom: rem-calc(40);
 
 				h2 {
 					font-size: rem-calc(30);
@@ -428,25 +441,6 @@
 					}
 				}
 			}
-	}
-
-	.orbit.orbit-large {
-
-		.inner {
-			position: relative;
-		}
-
-		.orbit-slide {
-			overflow: auto;
-		}
-
-		.gallery,
-		.hero {
-
-			.more {
-				position: static;
-			}
-		}
 	}
 
 
@@ -510,9 +504,11 @@
 
 	/* ROW */
 	.row {
+		height: 672px;
 
-		/* .inner {
-		} */
+		.inner {
+			height: 100%;
+		}
 
 		> * {
 			color: $white;
@@ -520,14 +516,9 @@
 
 			a {
 				color: inherit;
+				display: block;
+				height: 100%;
 			}
-
-		/* &:last-child {
-
-			.inner {
-				padding-bottom: 0;
-			}
-		} */
 	}
 
 
@@ -545,7 +536,6 @@
 
 		.inner {
 			padding: 0;
-			position: relative;
 		}
 
 			.button {
@@ -617,24 +607,23 @@
 					}
 				}
 
-				.row {
-					height: 100%;
-					display: flex;
-					position: relative;
+					.row {
+						display: flex;
+						align-items: center;
 
-					.inner {
-						align-self: center;
+						.inner {
+							height: auto;
 
-						*:last-child {
-							margin-bottom: 0;
+							*:last-child {
+								margin-bottom: 0;
+							}
 						}
 					}
-				}
 
-				.more {
-					position: fixed;
-					bottom: 300px;
-				}
+					.more {
+						position: absolute;
+						bottom: 160px;
+					}
 			}
 
 			&.orbit-small {
@@ -683,7 +672,7 @@
 			}
 
 			.lead {
-				margin-right: rem-calc(276)
+				margin-right: rem-calc(180)
 			}
 	}
 
@@ -760,9 +749,8 @@
 			position: relative;
 		}
 
-			.card {
-				margin-top: rem-calc(140);
-			}
+			/* .card {
+			} */
 
 				p {
 					color: $white;
@@ -778,6 +766,7 @@
 			.inner {
 				padding-top: 0;
 				padding-bottom: 0;
+				position: static;
 			}
 
 			.card {
@@ -800,8 +789,8 @@
 						font-size: rem-calc(16);
 
 						&:last-child {
-							position: fixed;
-							bottom: 180px;
+							position: absolute;
+							bottom: 25px;
 							left: 0;
 							right: 0;
 							padding: 0 rem-calc(113) 0 rem-calc(166);
@@ -845,7 +834,7 @@
 	.urban-obs-locale {
 
 		.inner {
-			padding: rem-calc(100) rem-calc(63);
+			padding: rem-calc(63) rem-calc(63) 0;
 		}
 	}
 
@@ -901,11 +890,14 @@
 
 		.inner {
 			padding: 0;
-			position: relative;
 		}
 
 			.section-label {
 				top: rem-calc(60);
+			}
+
+			.orbit-controls {
+				display: none;
 			}
 	}
 
@@ -917,6 +909,20 @@
 			.inner {
 				padding: 0;
 			}
+
+				.gallery {
+					position: static;
+				}
+
+					figcaption {
+						left: 0;
+						bottom: -2px;
+						width: 100%;
+					}
+
+						.more {
+							bottom: -60px;
+						}
 		}
 
 	}
