@@ -52,8 +52,8 @@ jQuery(function($) {
 		function tt_slider_large() {
 
 			/* Set the height of the slides to make them fullscreen */
-			var slide_height = $( '.orbit-large .orbit-container' ).outerHeight();
-			$( '.orbit-large .orbit-slide' ).height(slide_height);
+			var slide_height = $( '.orbit-container' ).outerHeight();
+			$( '.orbit-slide' ).height(slide_height);
 		}
 
 
