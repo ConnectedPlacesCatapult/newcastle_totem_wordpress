@@ -17,7 +17,7 @@ Further information about WordPress and WordPress multisite can be found at http
 ## Users and user access
 ### Access levels
 
-1.	Super admin - Power users who have access to the entire system: every site, user, theme and plugin. Only existing super admin users can create/delete other super admin users.
+1. Super admin - Power users who have access to the entire system: every site, user, theme and plugin. Only existing super admin users can create/delete other super admin users.
 2.	Admin - Users who have complete management control over a specific site.
 3.	Editor - Users who can add/edit/delete content in a specific site.
 
