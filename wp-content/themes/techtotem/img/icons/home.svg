@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="79px" height="75px" viewBox="0 0 79 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Icons/Navbar/Home" transform="translate(2.000000, 3.000000)" stroke="#DF1159" stroke-width="4">
+            <g id="Group">
+                <polyline id="Stroke-1" points="0 35 9.90568753 25.7869318 37.6986031 0 65.693 26.2670455 75 35"></polyline>
+                <path d="M44.999996,27.5098373 C44.9943738,31.6519819 41.6323074,35.0056151 37.4901627,34.9999929 C33.3480181,34.9957763 29.9943849,31.6337098 30.0000071,27.4901596 C30.0042237,23.3494205 33.3676957,19.9957873 37.5098404,20.000004 C41.6505795,20.0056262 45.0042127,23.3676926 44.999996,27.5098373 Z" id="Stroke-3"></path>
+                <path d="M10,26.0536086 L10,62.946231 C10,66.825804 13.2235797,70 17.1635104,70 L29.8543854,70 L28.639454,70 L28.639454,51.5050178 C28.639454,49.5652313 30.2512438,47.9781333 32.2212092,47.9781333 L42.922061,47.9781333 C44.8920264,47.9781333 46.5038162,49.5652313 46.5038162,51.5050178 L46.5038162,70 L45.1441819,70 L57.8364896,70 C61.7764203,70 65,66.825804 65,62.946231 L65,26" id="Stroke-5"></path>
+            </g>
+        </g>
+    </g>
+</svg>

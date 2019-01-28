@@ -1,0 +1,146 @@
+/**
+ * TechTotem Theme theme styles
+ *
+ * @package TechTotem
+ * @subpackage TechTotem_Theme
+ * @since 1.0
+ * @version 1.0
+ */
+
+
+/* 
+ * *******************************************************************************
+ * GLOBAL
+ * *******************************************************************************
+ */
+
+
+	/* BODY */
+	body {
+		font-weight: $global-weight-normal;
+		background: $white;
+	}
+
+
+		/* WRAPPER */
+		/* .wrapper {
+		} */
+
+
+			/* WRAPPER: INNER */
+			/* .wrapper-inner {
+			} */
+
+
+				/* CONTENT: MAIN */
+				/* .content-main {
+				} */
+
+
+				/* NAVBAR */
+				.navbar {
+					padding: ($global-padding * 2) $global-padding;
+
+					ul {
+						margin: 0;
+						display: flex;
+						justify-content: flex-end;
+					}
+
+						li {
+							margin: 0 ($global-margin / 2);
+							display: inline-block;
+							flex-grow: 1;
+							flex-basis: 255px;
+
+							&:first-child {
+								margin-left: 0;
+							}
+
+							&:last-child {
+								margin-right: 0;
+							}
+
+							// home
+							&:nth-child(1) {
+								display: flex;
+								justify-content: center;
+
+								span {
+									display: none;
+								}
+
+							}
+
+							// ili
+							&:nth-child(2) {
+
+								a {
+									background: get-color(fuschia);
+								}
+
+									img {
+										filter: invert(100%);
+									}
+
+							}
+
+							// urban observatory
+							&:nth-child(3) {
+
+								a {
+									background: get-color(turquoise);
+								}
+
+							}
+
+						}
+
+							a {
+								@include button;
+								display: flex;
+								align-items: center;
+								font-size: rem-calc(22);
+								text-align: left;
+								padding: rem-calc(10) rem-calc(25) rem-calc(10) rem-calc(35);
+								margin: 0;
+							}
+
+								span {
+									display: inline-block;
+									width: rem-calc(150);
+								}
+
+								.icon {
+									width: rem-calc(50);
+									height: rem-calc(50);
+									margin-left: rem-calc(10);
+								}
+				}
+
+
+/* 
+ * *******************************************************************************
+ * SCREENSAVER
+ * *******************************************************************************
+ */
+.page-screensaver {
+
+	.ili-greeting.navy {
+
+		.greeting-icons {
+
+			img {
+				filter: invert(100%);
+			}
+		}
+	}
+
+	.urban-obs-random {
+
+		h3 {
+			color: $white;
+		}
+	}
+
+}

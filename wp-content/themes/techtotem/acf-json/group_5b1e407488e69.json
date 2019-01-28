@@ -1,0 +1,104 @@
+{
+    "key": "group_5b1e407488e69",
+    "title": "Totem Partner: Banner\/Teaser",
+    "fields": [
+        {
+            "key": "field_5b1e450ce4668",
+            "label": "Content type",
+            "name": "tt_partner_teaser_content_type",
+            "type": "radio",
+            "instructions": "Choose the type of content you would like to add. \"Simple content\" uses a text editor similar to MS Word. \"Complex content\" is used for content which needs some code to work (e.g. an API, JavaScript).",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "simple": "Simple content",
+                "complex": "Complex content"
+            },
+            "allow_null": 1,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5b1e40abbbc64",
+            "label": "Banner\/Teaser",
+            "name": "tt_partner_teaser_wysiwyg",
+            "type": "wysiwyg",
+            "instructions": "Hero banner \/teaser text used for promoting some content and (optionally) linking through to the partner page on this totem. Used for simple content that doesn't require any special code to work (e.g. an API, JavaScript).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b1e450ce4668",
+                        "operator": "==",
+                        "value": "simple"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5b1e44b004922",
+            "label": "Banner\/Teaser",
+            "name": "tt_partner_teaser_code",
+            "type": "number",
+            "instructions": "Enter ID number of PHP Snippet",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b1e450ce4668",
+                        "operator": "==",
+                        "value": "complex"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "partner-settings"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1529498796
+}

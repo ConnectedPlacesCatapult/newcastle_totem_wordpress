@@ -1,0 +1,106 @@
+{
+    "key": "group_5b1a7a5d2e02a",
+    "title": "Totem Partner: Branding",
+    "fields": [
+        {
+            "key": "field_5b1a7a73112fc",
+            "label": "Name",
+            "name": "tt_partner_name",
+            "type": "text",
+            "instructions": "Name of organisation",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b1a7a91112fd",
+            "label": "Symbol",
+            "name": "tt_partner_symbol",
+            "type": "image",
+            "instructions": "Upload a symbol (the icon part of the logo sometimes used for a favicon) on a transparent background in SVG format",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg"
+        },
+        {
+            "key": "field_5b1a7afc112fe",
+            "label": "Logo",
+            "name": "tt_partner_logo",
+            "type": "image",
+            "instructions": "Upload full logo (symbol and logotype) on a transparent background in SVG format",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg"
+        },
+        {
+            "key": "field_5b1a7b5f112ff",
+            "label": "Colour",
+            "name": "tt_partner_colour",
+            "type": "color_picker",
+            "instructions": "Choose primary colour to use for this partner",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "partner-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1528709359
+}

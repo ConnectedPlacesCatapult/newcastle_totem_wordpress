@@ -1,0 +1,55 @@
+{
+    "key": "group_5b11216d9673a",
+    "title": "Dynamic content",
+    "fields": [
+        {
+            "key": "field_5b11217acc86f",
+            "label": "Choose content",
+            "name": "tt_dynamic_content",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Choose content": "Choose content",
+                "ili-greeting": "ILI: Greeting",
+                "urban-obs-banner": "Urban Observatory: Banner",
+                "urban-obs-random": "Urban Observatory: Random data",
+                "urban-obs-locale": "Urban Observatory: Locale summary",
+                "partner-teaser": "Partner: Banner\/Teaser",
+                "partner-main": "Partner: Page\/slide",
+                "locale": "Locale: Weather, events and suggested activity"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1528895680
+}
