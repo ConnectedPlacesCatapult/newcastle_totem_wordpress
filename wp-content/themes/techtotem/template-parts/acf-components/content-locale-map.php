@@ -45,15 +45,6 @@
 	  animation: fadein 1s;
 	}
 
-/*	.leaflet-marker-icon,
-	.leaflet-marker-shadow {
-	  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-	  -moz-animation: fadein 3s; /* Firefox < 16 */
-	  -ms-animation: fadein 3s; /* Internet Explorer */
-	  -o-animation: fadein 3s; /* Opera < 12.1 */
-	  animation: fadein 3s;
-	}
-
 	@keyframes fadein {
 	    from { opacity: 0; }
 	    to   { opacity: 1; }
@@ -121,19 +112,15 @@
 		// Get the json data
 		var recommendation = <?php echo json_encode( $tt_data_recommendations ); ?>;
 
-		L.mapbox.accessToken = 'pk.eyJ1IjoidGhhcnRuZWxsIiwiYSI6Im9RUHozYjQifQ.Rk3QrG_ymHOt9Jndsq_8Yg';
+		L.mapbox.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
 
 		var tilejson = {
-		  "tiles": [ "https://api.tiles.mapbox.com/v4/examples.map-i86l3621/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidGhhcnRuZWxsIiwiYSI6Im9RUHozYjQifQ.Rk3QrG_ymHOt9Jndsq_8Yg" ],
+		  "tiles": [ "https://api.tiles.mapbox.com/v4/examples.map-i86l3621/{z}/{x}/{y}.png?access_token=YOUR_MAPBOX_ACCESS_TOKEN" ],
 		  "minzoom": 0,
 		  "maxzoom": 18
 		}
 
-<<<<<<< Updated upstream
 		var map = L.mapbox.map('map').setView([recommendation[0].coordinates[1],recommendation[0].coordinates[0]], 15);
-=======
-		var map = L.mapbox.map('map').setView([recommendation[0].totem_coords[1], recommendation[0].totem_coords[0]], 17);
->>>>>>> Stashed changes
 
 		L.mapbox.styleLayer('mapbox://styles/thartnell/cjikda40704fg2rnp6cm5vsl4').addTo(map);
 
@@ -262,8 +249,6 @@
 		});
 
 		// Destination
-<<<<<<< Updated upstream
-
 		if (recommendation[0].category == 'food_drinks'){
 		    var destination_icon = L.icon({
 		        iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/category-food_drinks.svg'; ?>",
@@ -324,80 +309,6 @@
 			//markerList.push(marker);
 		} 
 
-		// Totem location
-=======
-		// Commenting out as we dont want icons
-		// if (recommendation[0].category == 'food_drinks'){
-		//     var destination_icon = L.icon({
-		//         iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/category-food_drinks.svg'; ?>",
-		//         iconSize: [75, 75], // size of the icon
-		//         iconAnchor:   [22, 94] // offset of the icon
-		//         });
-
-		// 	var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
-		// 		{icon: destination_icon}).addTo(map);
-		// 	//markerList.push(marker);
-		// } 
-
-		// else if (recommendation[0].category == 'tranquility'){
-		//     var destination_icon = L.icon({
-		//         iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/category-tranquility.svg'; ?>",
-		//         iconSize: [75, 75], 
-		//         iconAnchor:   [22, 94]
-		//         });
-
-		// 	var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
-		// 		{icon: destination_icon});			
-		// 	//markerList.push(marker);
-		// } 
-
-		// else if (recommendation[0].category == 'culture'){
-		//     var destination_icon = L.icon({
-		//         iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/category-culture.svg'; ?>",
-		//         iconSize: [75, 75], 
-		//         iconAnchor:   [22, 94]
-		//         });
-
-		// 	var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
-		// 		{icon: destination_icon}).addTo(map);	
-		// 	//markerList.push(marker);
-		// } 
-
-		// else if (recommendation[0].category == 'attractions'){
-		//     var destination_icon = L.icon({
-		//         iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/category-attractions.svg'; ?>",
-		//         iconSize: [75, 75], 
-		//         iconAnchor:   [22, 94]
-		//         });
-
-		// 	var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
-		// 		{icon: destination_icon}).addTo(map);		
-		// 	//markerList.push(marker);
-		// } 
-
-		// else if (recommendation[0].category == 'event'){
-		//     var destination_icon = L.icon({
-		//         iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/category-event.svg'; ?>",
-		//         iconSize: [75, 75], 
-		//         iconAnchor:   [22, 94]
-		//         });
-
-		// 	var marker = L.marker([recommendation[0].coordinates[1], recommendation[0].coordinates[0]],
-		// 		{icon: destination_icon}).addTo(map);
-		// 	//markerList.push(marker);
-		// } 
-
-		// Totem location 
-		// Again commenting out as this is the icon
->>>>>>> Stashed changes
-
-	 //    var totem_icon = L.icon({
-	 //        iconUrl: "<?php echo get_template_directory_uri() . '/img/icons/min/category-tranquility.svg'; ?>",
-	 //        iconSize: [100, 100], // size of the icon
-	 //        });
-
-		// var marker = L.marker([recommendation[0].totem_coords[1], recommendation[0].totem_coords[0]],
-		// 	{icon: totem_icon}).addTo(map);
 		
 		var icon = L.marker([recommendation[0].totem_coords[1], recommendation[0].totem_coords[0]], {
 			  icon: L.divIcon({
@@ -510,13 +421,6 @@
 			    [minlat, minlng+0.0005],
 			    [maxlat, maxlng]]
 			  );
-
-			// var zoom_level = (map.fitBounds([
-			//     [minlat, minlng+0.0005],
-			//     [maxlat, maxlng]]
-			//   ).getZoom()).toString();
-
-			// map.setZoom(zoom_level-0.5);
 
 		}
 
